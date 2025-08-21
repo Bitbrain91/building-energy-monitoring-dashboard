@@ -1,0 +1,81 @@
+# Ignore everything by default
+/*
+!.gitignore
+
+# Include only specific folders
+!/scripts/
+!/src/
+!/docs/
+!/Daten/
+
+# Include specific files in root
+!START_DASHBOARD.bat
+!start_dashboard.py
+
+# Exclude sensitive data in Daten folder
+Daten/vertraulich*/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.swarm/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Build folders
+build/
+dist/
+*.egg-info/
+
+# Memory and coordination folders
+memory/
+coordination/
+
+# Archives
+archive_old_dashboards/
+
+# Node modules (if any)
+node_modules/
+
+# General folder (contains internal project docs)
+General/
+
+# Literature folder
+Literatur*/
+
+# Claude configuration files
+CLAUDE.md
+claude-flow*
+*.config.json
+
+# Data structure files
+data_structure.json
+
+# Requirements and readme (we'll add our own)
+requirements.txt
+README.md
