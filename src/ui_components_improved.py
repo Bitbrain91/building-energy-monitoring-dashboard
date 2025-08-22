@@ -37,7 +37,7 @@ def create_navbar():
         dbc.Container([
             dbc.NavbarBrand([
                 html.I(className="fas fa-chart-line me-2"),
-                "MokiG Dashboard - Erentrudisstraße Monitoring"
+                "MokiG Dashboard - Energiemonitoring"
             ], className="ms-2"),
             dbc.Nav([
                 dbc.NavItem(dbc.NavLink("Übersicht", href="#", id="nav-overview")),
@@ -62,19 +62,43 @@ def create_metric_card(title, value, subtitle="", color="primary", icon=None):
     ], className="h-100 shadow-sm")
 
 
-def create_data_table_with_full_columns(df, table_id, max_rows=10000):
+def create_data_table_with_full_columns(df, table_id, max_rows=None):
     """
     Erstellt eine verbesserte Datentabelle mit:
     - Vollständigen Spaltennamen (nicht abgeschnitten)
     - Resizable Columns
     - Besserer Datumsformatierung
     - Horizontalem Scrolling mit festen Headers
+    - Intelligenter Handhabung großer Datasets
     """
     if df.empty:
         return html.Div("Keine Daten verfügbar", className="text-muted text-center p-4")
     
-    # Limitiere für Performance
-    display_df = df.head(max_rows).copy()
+    # Dynamische max_rows basierend auf Dataset-Größe
+    if max_rows is None:
+        # Für große Datasets (>50k Zeilen), zeige alle Daten mit virtualization
+        # Für kleinere Datasets, zeige alle Daten
+        if len(df) > 100000:
+            max_rows = 100000  # Limit für sehr große Datasets
+        else:
+            max_rows = len(df)  # Zeige alle Daten für normale Datasets
+    
+    # Bei großen Datasets, zeige die neuesten Daten zuerst wenn Date-Spalte vorhanden
+    if len(df) > 20000 and 'Date' in df.columns:
+        try:
+            # Sortiere nach Datum absteigend (neueste zuerst)
+            df = df.sort_values('Date', ascending=False)
+            display_df = df.head(max_rows).copy()
+            # Sortiere wieder aufsteigend für Anzeige
+            display_df = display_df.sort_values('Date', ascending=True)
+        except:
+            display_df = df.head(max_rows).copy()
+    else:
+        # Limitiere für Performance
+        display_df = df.head(max_rows).copy()
+    
+    # Füge Info-Zeile hinzu wenn Daten limitiert wurden
+    is_limited = len(df) > max_rows
     
     # Formatiere Datumsspalte wenn vorhanden
     if 'Date' in display_df.columns:
@@ -109,7 +133,20 @@ def create_data_table_with_full_columns(df, table_id, max_rows=10000):
         
         columns.append(col_def)
     
-    return dash_table.DataTable(
+    # Erstelle Info-Alert wenn Daten limitiert wurden
+    info_alert = None
+    if is_limited:
+        info_alert = dbc.Alert(
+            [
+                html.I(className="fas fa-info-circle me-2"),
+                f"Anzeige limitiert auf {max_rows:,} von {len(df):,} Zeilen für bessere Performance. ",
+                "Die Daten sind vollständig geladen und in Visualisierungen verfügbar."
+            ],
+            color="info",
+            className="mb-2"
+        )
+    
+    table_component = dash_table.DataTable(
         id=table_id,
         columns=columns,
         data=display_df.to_dict('records'),
@@ -194,6 +231,12 @@ def create_data_table_with_full_columns(df, table_id, max_rows=10000):
         export_format='xlsx',
         export_headers='display'
     )
+    
+    # Wenn Info-Alert vorhanden, kombiniere mit Tabelle
+    if info_alert:
+        return html.Div([info_alert, table_component])
+    else:
+        return table_component
 
 
 def create_visualization_panel_with_defaults(df, panel_id):
@@ -342,6 +385,27 @@ def create_statistics_panel(df):
     stats = df.describe()
     numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
     
+    # Erstelle Zeitraum-Information wenn Datumsspalte vorhanden
+    date_range_info = None
+    if 'Date' in df.columns and df['Date'].notna().any():
+        try:
+            date_min = df['Date'].min()
+            date_max = df['Date'].max()
+            date_range_info = dbc.Alert(
+                [
+                    html.I(className="fas fa-calendar-alt me-2"),
+                    f"Zeitraum: {date_min.strftime('%d.%m.%Y %H:%M')} bis {date_max.strftime('%d.%m.%Y %H:%M')}",
+                    html.Br(),
+                    f"Anzahl Tage: {(date_max - date_min).days} Tage",
+                    html.Br(),
+                    f"Anzahl Datenpunkte: {df['Date'].notna().sum():,}"
+                ],
+                color="success",
+                className="mb-3"
+            )
+        except:
+            pass
+    
     return dbc.Card([
         dbc.CardHeader([
             html.I(className="fas fa-calculator me-2"),
@@ -354,8 +418,8 @@ def create_statistics_panel(df):
                 className="mb-3"
             ),
             
-            # Zeitraum-Information wenn Datumsspalte vorhanden
-            html.Div(id="date-range-info", className="mb-3"),
+            # Zeitraum-Information wenn vorhanden
+            date_range_info if date_range_info else html.Div(),
             
             # Statistik-Tabelle für numerische Spalten
             html.H5("Statistische Kennzahlen:", className="mt-3 mb-2"),
@@ -395,7 +459,7 @@ def get_dataset_description(source, dataset_name):
             'wetterdaten': 'Wetterdaten inkl. Temperatur, Strahlung und Niederschlag.'
         },
         'erentrudis': {
-            'default': 'Erentrudisstr.: Gebäudemonitoring-Daten mit Energieverbrauch, Temperaturen und Durchflussmessungen.',
+            'default': 'Erentrudisstraße: Gebäudemonitoring-Daten mit Energieverbrauch, Temperaturen und Durchflussmessungen.',
             'gesamtdaten_2024': '\ud83d\udcc1 Datei: Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv\n\u2192 Gesamtjahr 2024 mit 23 ausgewählten Parametern: Heizkreistemperaturen, Ventilstellungen, Fernwärme- und Zirkulationsdaten.',
             'detail_juli_2024': '\ud83d\udcc1 Datei: All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv\n\u2192 Detailanalyse Juli 2024 mit 44 Parametern: Alle Messgrößen inkl. Ventilstellungen, Pumpendrehzahlen, Temperaturen und Energieverbrauch für den Sommermonat.',
             'langzeit_2023_2025': '\ud83d\udcc1 Datei: export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv\n\u2192 Langzeitdaten Dezember 2023 bis März 2025 in täglicher Auflösung mit 48 Parametern: Kompletter Systemüberblick inkl. Pumpensteuerung, Puffertemperaturen, Heizkreise und Fernwärmedaten.',
@@ -404,7 +468,9 @@ def get_dataset_description(source, dataset_name):
             'relevant': 'Ausgewählte relevante Parameter für Energieanalyse.'
         },
         'fis': {
-            'default': 'FIS Inhauser: Gebäudedaten (5 Min. Frequenz) mit 111 Parametern. Zeitraum: 01.10.2024 - 31.03.2025.',
+            'default': 'FIS Inhauser: Gebäudemonitoring-System mit Temperatur-, Energie- und Durchflussmessungen.',
+            'export_q1_2025': '🏢 GEBÄUDEMONITORING KOMPLETT\n📅 Zeitraum: 31.12.2024 - 31.03.2025 (Q1 2025)\n⏱️ Messintervall: 5 Minuten (288 Messungen/Tag)\n📊 111 Parameter umfassend:\n   • 44 Temperaturmessungen (Heizkreise, Rücklauf, Vorlauf)\n   • 38 Strom-/Energiemessungen (Wärmepumpen, Lüftung)\n   • 14 Durchflussmessungen (Heizung, Kühlung)\n   • 14 Leistungsmessungen (kW)\n📁 Originaldatei: export_1551_2024-12-31-00-00_2025-03-31-23-55.csv',
+            'data_2024_2025_at': '🌡️ AUßENTEMPERATUR-ZEITREIHE\n📅 Zeitraum: Januar 2024 - Mai 2025 (>16 Monate)\n⏱️ Messintervall: 5 Minuten (hochauflösend)\n📊 54.154 Datenpunkte - Kontinuierliche Außenfühler-Messungen für:\n   • Klimaanalysen und Heizlastberechnungen\n   • Vergleich mit Innentemperaturen\n   • Wetterabhängige Energiebedarfsanalyse\n   • Jahreszeiten-übergreifende Temperaturverläufe\n📁 Originaldatei: 2024-2025-05_AT.csv',
             'hauptdaten': 'Hauptdatensatz Q1 2025 mit allen Messpunkten.',
             'test': 'Testdaten für Validierung und Kalibrierung.',
             '250101': 'Daten Januar-März 2025.'

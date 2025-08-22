@@ -151,8 +151,38 @@ class DataLoader:
         
         if date_col_name:
             try:
+                # Spezielle Behandlung für FIS
+                if source_type == "fis":
+                    # FIS verwendet deutsches Format ohne Sekunden oder ISO-Format
+                    # Prüfe erste Zeile für Format-Erkennung
+                    sample_val = str(df[date_col_name].iloc[0]) if len(df) > 0 else ""
+                    
+                    if '.' in sample_val and ':' in sample_val:
+                        # Deutsches Format: 31.12.2024 00:00
+                        df['Date'] = pd.to_datetime(df[date_col_name], 
+                                                   format='%d.%m.%Y %H:%M', 
+                                                   errors='coerce')
+                    elif '-' in sample_val and ':' in sample_val:
+                        # ISO Format: 2024-01-01 01:15:00
+                        df['Date'] = pd.to_datetime(df[date_col_name], 
+                                                   format='%Y-%m-%d %H:%M:%S', 
+                                                   errors='coerce')
+                    else:
+                        # Fallback: automatische Erkennung
+                        df['Date'] = pd.to_datetime(df[date_col_name], 
+                                                   infer_datetime_format=True,
+                                                   errors='coerce',
+                                                   dayfirst=True)
+                    
+                    # Keine Interpolation für FIS - die Daten sind korrekt
+                    invalid_dates = df['Date'].isna().sum()
+                    if invalid_dates > 0 and invalid_dates < len(df) * 0.01:  # Nur wenn < 1% ungültig
+                        df = df.dropna(subset=['Date'])
+                        print(f"  ⚠ {invalid_dates} Zeilen mit ungültigen Datumswerten entfernt")
+                    date_found = True
+                    
                 # Spezielle Behandlung für Erentrudis
-                if source_type == "erentrudis":
+                elif source_type == "erentrudis":
                     # Versuche verschiedene Datumsformate
                     date_formats = [
                         '%d.%m.%Y %H:%M:%S',
@@ -182,31 +212,36 @@ class DataLoader:
                                                    errors='coerce',
                                                    dayfirst=True)
                         date_found = True
+                    
+                    # Entferne ungültige Dates nur bei kleinen Mengen
+                    invalid_dates = df['Date'].isna().sum()
+                    if invalid_dates > 0 and invalid_dates < len(df) * 0.1:
+                        df = df.dropna(subset=['Date'])
+                        print(f"  ⚠ {invalid_dates} Zeilen mit ungültigen Datumswerten entfernt")
+                        
                 else:
-                    # Standard Datetime-Konvertierung
+                    # Standard Datetime-Konvertierung für andere Quellen
                     df['Date'] = pd.to_datetime(df[date_col_name], 
                                                errors='coerce',
                                                infer_datetime_format=True,
                                                dayfirst=True)
                     date_found = True
-                
-                # Entferne Zeilen mit ungültigen Datumswerten nur wenn zu viele fehlen
-                initial_len = len(df)
-                invalid_dates = df['Date'].isna().sum()
-                
-                if invalid_dates > 0:
-                    if invalid_dates < len(df) * 0.1:  # Weniger als 10% ungültig
-                        df = df.dropna(subset=['Date'])
-                        print(f"  ⚠ {invalid_dates} Zeilen mit ungültigen Datumswerten entfernt")
-                    else:
-                        # Versuche zu interpolieren oder fülle mit sequentiellen Daten
-                        print(f"  ⚠ {invalid_dates} ungültige Datumswerte - versuche Interpolation")
-                        if df['Date'].notna().sum() > 2:
-                            df['Date'] = df['Date'].interpolate(method='time', limit_direction='both')
+                    
+                    # Entferne Zeilen mit ungültigen Datumswerten nur wenn wenige
+                    invalid_dates = df['Date'].isna().sum()
+                    if invalid_dates > 0:
+                        if invalid_dates < len(df) * 0.1:  # Weniger als 10% ungültig
+                            df = df.dropna(subset=['Date'])
+                            print(f"  ⚠ {invalid_dates} Zeilen mit ungültigen Datumswerten entfernt")
                         else:
-                            # Erstelle synthetische Zeitreihe
-                            print(f"  ℹ Erstelle synthetische Zeitreihe")
-                            df['Date'] = pd.date_range(start='2024-01-01', periods=len(df), freq='H')
+                            # Versuche zu interpolieren nur für nicht-FIS Daten
+                            print(f"  ⚠ {invalid_dates} ungültige Datumswerte - versuche Interpolation")
+                            if df['Date'].notna().sum() > 2:
+                                df['Date'] = df['Date'].interpolate(method='time', limit_direction='both')
+                            else:
+                                # Erstelle synthetische Zeitreihe
+                                print(f"  ℹ Erstelle synthetische Zeitreihe")
+                                df['Date'] = pd.date_range(start='2024-01-01', periods=len(df), freq='H')
                 
             except Exception as e:
                 print(f"  ⚠ Warnung bei Datumskonvertierung ({date_col_name}): {e}")
@@ -288,7 +323,7 @@ class DataLoader:
                 data['twin2sim'][key] = self.load_csv_flexible(file, file.stem, "twin2sim")
         
         # Erentrudisstraße - Nur die 3 spezifischen Datasets
-        print("\n🏢 Erentrudisstr. Daten (optimiert für 3 Haupt-Datasets):")
+        print("\n🏢 Erentrudisstraße Daten (optimiert für 3 Haupt-Datasets):")
         if self.erentrudis_path.exists():
             monitoring_path = self.erentrudis_path / "Monitoring"
             if monitoring_path.exists():
@@ -319,29 +354,28 @@ class DataLoader:
                         "erentrudis"
                     )
         
-        # FIS Inhauser
-        print("\n🏭 FIS Inhauser Daten:")
+        # FIS Inhauser - Nur 2 spezifische Datasets
+        print("\n🏭 FIS Inhauser Daten (optimiert für 2 Haupt-Datasets):")
         if self.fis_path.exists():
             monitoring_path = self.fis_path / "Monitoring"
-            if monitoring_path.exists():
-                # Excel-Dateien
-                for xlsx_file in monitoring_path.glob("*.xlsx"):
-                    key = xlsx_file.stem
-                    data['fis'][f"hauptdaten_{key}"] = self.load_excel_flexible(xlsx_file, key)
-                
-                # CSV in Unterordnern (z.B. 250101-250331)
-                for subdir in monitoring_path.iterdir():
-                    if subdir.is_dir():
-                        for csv_file in subdir.rglob("*.csv"):
-                            key = f"{subdir.name}_{csv_file.stem}"[:30]
-                            data['fis'][key] = self.load_csv_flexible(csv_file, key, "fis")
-                        
-                        # Test-Ordner
-                        test_path = subdir / "test"
-                        if test_path.exists():
-                            for csv_file in test_path.glob("*.csv"):
-                                key = f"test_{csv_file.stem}"[:30]
-                                data['fis'][key] = self.load_csv_flexible(csv_file, key, "fis")
+            
+            # Dataset 1: Gebäudemonitoring Komplett - Q1 2025
+            export_q1_2025 = monitoring_path / "250101-250331" / "export_1551_2024-12-31-00-00_2025-03-31-23-55.csv"
+            if export_q1_2025.exists():
+                data['fis']['export_q1_2025'] = self.load_csv_flexible(
+                    export_q1_2025,
+                    "Gebäudemonitoring Komplett (111 Parameter)",
+                    "fis"
+                )
+            
+            # Dataset 2: Außentemperatur-Zeitreihe 2024-2025
+            fis_at_csv = monitoring_path / "2024-2025-05_AT.csv"
+            if fis_at_csv.exists():
+                data['fis']['data_2024_2025_at'] = self.load_csv_flexible(
+                    fis_at_csv,
+                    "Außentemperatur-Messungen (2024-2025)",
+                    "fis"
+                )
         
         # KW Neukirchen
         print("\n⚡ KW Neukirchen Daten:")

@@ -26,6 +26,24 @@ from visualization_improved import create_advanced_visualization_panel, create_v
 def register_callbacks(app, ALL_DATA):
     """Registriert alle Callbacks für die App"""
     
+    # Callback to save dataset selection per tab
+    @app.callback(
+        Output("tab-datasets-store", "data"),
+        [Input("dataset-selector", "value")],
+        [State("current-source-store", "data"),
+         State("tab-datasets-store", "data")]
+    )
+    def save_tab_dataset_selection(selected_dataset, current_source, tab_datasets):
+        """Speichert die Dataset-Auswahl pro Tab"""
+        if not current_source or not selected_dataset:
+            return tab_datasets or {}
+        
+        # Update the store with the current selection
+        if tab_datasets is None:
+            tab_datasets = {}
+        tab_datasets[current_source] = selected_dataset
+        return tab_datasets
+    
     # Callback for custom visualization parameter selection
     @app.callback(
         Output({'type': 'viz-container', 'index': MATCH}, 'children'),
@@ -128,7 +146,12 @@ def register_callbacks(app, ALL_DATA):
                         color="info",
                         className="mb-3"
                     ),
-                    create_data_table_with_full_columns(df, f"table-{selected_dataset}")
+                    # Spezielle Behandlung für FIS Daten - zeige alle Zeilen
+                    create_data_table_with_full_columns(
+                        df, 
+                        f"table-{selected_dataset}",
+                        max_rows=None if current_source == 'fis' else None
+                    )
                 ])
             ], className="shadow-sm")
         
