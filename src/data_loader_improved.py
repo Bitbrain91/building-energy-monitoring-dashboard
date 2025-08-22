@@ -287,29 +287,37 @@ class DataLoader:
                 key = file.stem.lower().replace('t2s_', '')
                 data['twin2sim'][key] = self.load_csv_flexible(file, file.stem, "twin2sim")
         
-        # Erentrudisstraße
-        print("\n🏢 Erentrudisstr. Daten:")
+        # Erentrudisstraße - Nur die 3 spezifischen Datasets
+        print("\n🏢 Erentrudisstr. Daten (optimiert für 3 Haupt-Datasets):")
         if self.erentrudis_path.exists():
             monitoring_path = self.erentrudis_path / "Monitoring"
             if monitoring_path.exists():
-                # CSV Dateien direkt im Monitoring-Ordner
-                for csv_file in monitoring_path.glob("*.csv"):
-                    key = csv_file.stem.replace('export_', '').replace('_', '-')[:30]
-                    data['erentrudis'][key] = self.load_csv_flexible(csv_file, key, "erentrudis")
+                # Dataset 1: Gesamtdaten 2024 (23 Parameter)
+                relevant1_2024 = monitoring_path / "2024" / "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv"
+                if relevant1_2024.exists():
+                    data['erentrudis']['gesamtdaten_2024'] = self.load_csv_flexible(
+                        relevant1_2024, 
+                        "Gesamtdaten 2024 (Relevant-1_2024)", 
+                        "erentrudis"
+                    )
                 
-                # 2024 Ordner
-                year_2024_path = monitoring_path / "2024"
-                if year_2024_path.exists():
-                    for csv_file in year_2024_path.glob("*.csv"):
-                        key = f"2024_{csv_file.stem}"[:30]
-                        data['erentrudis'][key] = self.load_csv_flexible(csv_file, key, "erentrudis")
-                    
-                    # Durchfluss Unterordner
-                    durchfluss_path = year_2024_path / "Durchfluß"
-                    if durchfluss_path.exists():
-                        for csv_file in durchfluss_path.glob("*.csv"):
-                            key = f"Durchfluss_{csv_file.stem}"[:30]
-                            data['erentrudis'][key] = self.load_csv_flexible(csv_file, key, "erentrudis")
+                # Dataset 2: Juli 2024 Detaildaten (44 Parameter)
+                all_july_2024 = monitoring_path / "2024" / "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv"
+                if all_july_2024.exists():
+                    data['erentrudis']['detail_juli_2024'] = self.load_csv_flexible(
+                        all_july_2024, 
+                        "Juli 2024 Detaildaten (All_24-07)", 
+                        "erentrudis"
+                    )
+                
+                # Dataset 3: Langzeit 2023-2025 (täglich)
+                export_ers = monitoring_path / "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv"
+                if export_ers.exists():
+                    data['erentrudis']['langzeit_2023_2025'] = self.load_csv_flexible(
+                        export_ers, 
+                        "Langzeit 2023-2025 (EXPORTERS)", 
+                        "erentrudis"
+                    )
         
         # FIS Inhauser
         print("\n🏭 FIS Inhauser Daten:")

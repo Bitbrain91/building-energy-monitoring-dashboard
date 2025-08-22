@@ -36,7 +36,7 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.FONT_AWESOME],
     suppress_callback_exceptions=True
 )
-app.title = "MokiG Dashboard - Hauptversion"
+app.title = "MokiG Dashboard - Erentrudisstraße"
 
 # ============================================================================
 # DATEN LADEN
@@ -48,7 +48,7 @@ data_loader = DataLoader(BASE_PATH)
 
 # Lade alle Daten
 print("\n" + "="*60)
-print("🚀 MokiG Dashboard - Hauptversion wird gestartet...")
+print("🚀 MokiG Dashboard - Erentrudisstraße Monitoring wird gestartet...")
 print("="*60)
 print("📊 Lade Datenquellen...")
 ALL_DATA = data_loader.load_all_data()
@@ -161,9 +161,33 @@ def update_main_tab(active_tab):
             )
         ), active_tab
     
-    # Erstelle Dropdown für Dataset-Auswahl
-    options = [{'label': f"{k} ({len(v):,} Zeilen)", 'value': k} 
-               for k, v in valid_datasets.items()]
+    # Erstelle Dropdown für Dataset-Auswahl mit deutschen Labels für Erentrudisstr
+    if active_tab == "erentrudis":
+        # Spezielle Labels für Erentrudisstr Datasets mit vollständigen Dateinamen
+        label_mapping = {
+            'gesamtdaten_2024': {
+                'label': 'Gesamtdaten 2024 (23 Parameter)',
+                'filename': 'Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv'
+            },
+            'detail_juli_2024': {
+                'label': 'Juli 2024 Detaildaten (44 Parameter)', 
+                'filename': 'All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv'
+            },
+            'langzeit_2023_2025': {
+                'label': 'Langzeit 2023-2025 (täglich)',
+                'filename': 'export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv'
+            }
+        }
+        options = []
+        for k, v in valid_datasets.items():
+            if k in label_mapping and not v.empty:
+                info = label_mapping[k]
+                # Zeige vollständigen Dateinamen im Label
+                label = f"{info['label']} - {len(v):,} Zeilen\n📁 {info['filename']}"
+                options.append({'label': label, 'value': k})
+    else:
+        options = [{'label': f"{k} ({len(v):,} Zeilen)", 'value': k} 
+                   for k, v in valid_datasets.items()]
     
     # Hole Dataset-Beschreibung
     description = get_dataset_description(active_tab, options[0]['value'] if options else None)
@@ -182,7 +206,8 @@ def update_main_tab(active_tab):
                         options=options,
                         value=options[0]['value'] if options else None,
                         placeholder="Dataset wählen...",
-                        clearable=False
+                        clearable=False,
+                        style={'height': 'auto', 'minHeight': '60px'}  # Mehr Platz für mehrzeilige Labels
                     ),
                     # Dataset-Beschreibung
                     html.Div(
@@ -194,7 +219,7 @@ def update_main_tab(active_tab):
                 dbc.Col([
                     html.Label("Aktion:", className="fw-bold"),
                     dbc.Button(
-                        [html.I(className="fas fa-download me-2"), "Dataset laden"],
+                        [html.I(className="fas fa-download me-2"), "Datensatz laden"],
                         id="load-dataset-btn",
                         color="primary",
                         className="w-100"

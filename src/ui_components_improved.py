@@ -37,7 +37,7 @@ def create_navbar():
         dbc.Container([
             dbc.NavbarBrand([
                 html.I(className="fas fa-chart-line me-2"),
-                "MokiG Dashboard - Optimierte Version"
+                "MokiG Dashboard - Erentrudisstraße Monitoring"
             ], className="ms-2"),
             dbc.Nav([
                 dbc.NavItem(dbc.NavLink("Übersicht", href="#", id="nav-overview")),
@@ -395,7 +395,10 @@ def get_dataset_description(source, dataset_name):
             'wetterdaten': 'Wetterdaten inkl. Temperatur, Strahlung und Niederschlag.'
         },
         'erentrudis': {
-            'default': 'Erentrudisstr.: Gebäudemonitoring-Daten (5 Min. Frequenz) mit ca. 49 Parametern. Zeitraum: 01.12.2023 - 31.03.2025.',
+            'default': 'Erentrudisstr.: Gebäudemonitoring-Daten mit Energieverbrauch, Temperaturen und Durchflussmessungen.',
+            'gesamtdaten_2024': '\ud83d\udcc1 Datei: Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv\n\u2192 Gesamtjahr 2024 mit 23 ausgewählten Parametern: Heizkreistemperaturen, Ventilstellungen, Fernwärme- und Zirkulationsdaten.',
+            'detail_juli_2024': '\ud83d\udcc1 Datei: All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv\n\u2192 Detailanalyse Juli 2024 mit 44 Parametern: Alle Messgrößen inkl. Ventilstellungen, Pumpendrehzahlen, Temperaturen und Energieverbrauch für den Sommermonat.',
+            'langzeit_2023_2025': '\ud83d\udcc1 Datei: export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv\n\u2192 Langzeitdaten Dezember 2023 bis März 2025 in täglicher Auflösung mit 48 Parametern: Kompletter Systemüberblick inkl. Pumpensteuerung, Puffertemperaturen, Heizkreise und Fernwärmedaten.',
             'durchfluss': 'Durchflussmessungen für Heizkreise und Warmwasser.',
             '2024': 'Monitoring-Daten aus 2024 mit Energieverbrauch und Temperaturen.',
             'relevant': 'Ausgewählte relevante Parameter für Energieanalyse.'
