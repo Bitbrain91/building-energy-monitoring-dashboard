@@ -477,6 +477,11 @@ def get_dataset_description(source, dataset_name):
         },
         'kw': {
             'default': 'KW Neukirchen: Kraftwerksdaten (15 Min. Frequenz) für 3 Kraftwerke plus Netzübergabe. Zeitraum: 01.01.2020 - 31.12.2024.',
+            'uebergabe_bezug_gesamt': '⚡ ÜBERGABE BEZUG - AGGREGIERTE GESAMTDATEN\n📅 Zeitraum: Januar 2020 - Dezember 2024 (5 Jahre)\n⏱️ Messintervall: 15 Minuten\n📊 Umfasst alle monatlichen Bezugsdaten vom Netz:\n   • Leistungsmessungen (kW)\n   • Energiemessungen (kWh)\n   • Netzqualitätsparameter\n📁 Aggregiert aus 60 Monatsdateien (12 Monate × 5 Jahre)',
+            'uebergabe_lieferung_gesamt': '📤 ÜBERGABE LIEFERUNG - AGGREGIERTE GESAMTDATEN\n📅 Zeitraum: Januar 2020 - Dezember 2024 (5 Jahre)\n⏱️ Messintervall: 15 Minuten\n📊 Umfasst alle monatlichen Lieferdaten ins Netz:\n   • Eingespeiste Leistung (kW)\n   • Eingespeiste Energie (kWh)\n   • Einspeisequalität\n📁 Aggregiert aus 60 Monatsdateien (12 Monate × 5 Jahre)',
+            'kw_duernbach_gesamt': '🏭 KRAFTWERK DÜRNBACH - ERZEUGUNGSDATEN\n📅 Zeitraum: 2020 - 2024 (5 Jahre komplett)\n⏱️ Messintervall: 15 Minuten\n💧 Wasserkraftwerk mit folgenden Parametern:\n   • Turbinenleistung (kW)\n   • Erzeugte Energie (kWh)\n   • Betriebsstunden\n   • Verfügbarkeit\n📁 Aggregiert aus 5 Jahresdateien',
+            'kw_untersulzbach_gesamt': '🏭 KRAFTWERK UNTERSULZBACH - ERZEUGUNGSDATEN\n📅 Zeitraum: 2020 - 2024 (5 Jahre komplett)\n⏱️ Messintervall: 15 Minuten\n💧 Wasserkraftwerk mit folgenden Parametern:\n   • Turbinenleistung (kW)\n   • Erzeugte Energie (kWh)\n   • Betriebsstunden\n   • Verfügbarkeit\n📁 Aggregiert aus 5 Jahresdateien',
+            'kw_wiesbach_gesamt': '🏭 KRAFTWERK WIESBACH - ERZEUGUNGSDATEN\n📅 Zeitraum: 2020 - 2024 (5 Jahre komplett)\n⏱️ Messintervall: 15 Minuten\n💧 Wasserkraftwerk mit folgenden Parametern:\n   • Turbinenleistung (kW)\n   • Erzeugte Energie (kWh)\n   • Betriebsstunden\n   • Verfügbarkeit\n📁 Aggregiert aus 5 Jahresdateien',
             'dürnbach': 'KW Dürnbach - Erzeugungsdaten.',
             'untersulzbach': 'KW Untersulzbach - Erzeugungsdaten.',
             'wiesbach': 'KW Wiesbach - Erzeugungsdaten.',

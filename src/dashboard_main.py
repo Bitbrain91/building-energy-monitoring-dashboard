@@ -231,6 +231,25 @@ def update_main_tab(active_tab):
                 label = label_map.get(key, f"{key} ({len(valid_datasets[key]):,} Zeilen)")
                 options.append({'label': label, 'value': key})
                 
+        elif active_tab == "kw":
+            # Spezielle Gruppierung für KW Neukirchen mit deutschen Labels
+            label_map = {
+                'uebergabe_bezug_gesamt': '⚡ Übergabe Bezug - Gesamtdaten 2020-2024',
+                'uebergabe_lieferung_gesamt': '📤 Übergabe Lieferung - Gesamtdaten 2020-2024',
+                'kw_duernbach_gesamt': '🏭 Kraftwerk Dürnbach - Erzeugung 2020-2024',
+                'kw_untersulzbach_gesamt': '🏭 Kraftwerk Untersulzbach - Erzeugung 2020-2024',
+                'kw_wiesbach_gesamt': '🏭 Kraftwerk Wiesbach - Erzeugung 2020-2024'
+            }
+            
+            # Erstelle gruppierte Optionen
+            for key in ['uebergabe_bezug_gesamt', 'uebergabe_lieferung_gesamt', 
+                       'kw_duernbach_gesamt', 'kw_untersulzbach_gesamt', 'kw_wiesbach_gesamt']:
+                if key in valid_datasets:
+                    df = valid_datasets[key]
+                    rows_count = len(df) if not df.empty else 0
+                    label = f"{label_map.get(key, key)} ({rows_count:,} Datenpunkte)"
+                    options.append({'label': label, 'value': key})
+                
         else:
             # Standard Labels für andere Tabs
             for key, df in valid_datasets.items():

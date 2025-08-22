@@ -301,6 +301,31 @@ class DataLoader:
             print(f"✗ Fehler bei {name}: {e}")
             return pd.DataFrame()
     
+    def aggregate_kw_datasets(self, datasets_dict, pattern, name):
+        """
+        Aggregiert mehrere KW Datasets zu einem einzelnen Dataset.
+        """
+        matching_dfs = []
+        
+        for key, df in datasets_dict.items():
+            if pattern.lower() in key.lower() and not df.empty:
+                # Füge eine Quellspalte hinzu für Nachverfolgbarkeit
+                df_copy = df.copy()
+                df_copy['Quelle'] = key
+                matching_dfs.append(df_copy)
+        
+        if matching_dfs:
+            # Kombiniere alle DataFrames
+            combined_df = pd.concat(matching_dfs, ignore_index=True)
+            # Sortiere nach Datum wenn vorhanden
+            if 'Date' in combined_df.columns:
+                combined_df = combined_df.sort_values('Date')
+            print(f"✓ Aggregiert: {name} - {len(matching_dfs)} Dateien, {len(combined_df):,} Zeilen gesamt")
+            return combined_df
+        else:
+            print(f"✗ Keine Daten gefunden für: {name}")
+            return pd.DataFrame()
+    
     @lru_cache(maxsize=1)
     def load_all_data(self):
         """Lädt ALLE Daten aus allen Quellen"""
@@ -377,20 +402,64 @@ class DataLoader:
                     "fis"
                 )
         
-        # KW Neukirchen
+        # KW Neukirchen - Mit intelligenter Gruppierung
         print("\n⚡ KW Neukirchen Daten:")
         if self.kw_path.exists():
+            # Temporäres Dictionary für alle einzelnen Datasets
+            temp_kw_data = {}
+            
+            # Lade zuerst alle einzelnen Dateien
+            print("  📁 Lade Einzeldateien...")
+            
             # Erzeugungsdaten (Hauptdateien)
             for xlsx_file in self.kw_path.glob("KW*.XLSX"):
-                key = xlsx_file.stem.replace('_ERZEUGUNG', '')
-                data['kw'][key] = self.load_excel_flexible(xlsx_file, key)
+                key = xlsx_file.stem
+                temp_kw_data[key] = self.load_excel_flexible(xlsx_file, key)
             
             # Jahresordner für Übergabedaten
             for year_dir in self.kw_path.iterdir():
                 if year_dir.is_dir() and year_dir.name.isdigit():
                     for xlsx_file in year_dir.glob("*.XLSX"):
-                        key = f"{year_dir.name}_{xlsx_file.stem}"[:30]
-                        data['kw'][key] = self.load_excel_flexible(xlsx_file, key)
+                        key = f"{year_dir.name}_{xlsx_file.stem}"
+                        temp_kw_data[key] = self.load_excel_flexible(xlsx_file, key)
+            
+            # Jetzt aggregiere die Daten in logische Gruppen
+            print("\n  🔄 Erstelle aggregierte Datasets...")
+            
+            # 1. Übergabe Bezug - Alle Dateien von 2020-2024
+            data['kw']['uebergabe_bezug_gesamt'] = self.aggregate_kw_datasets(
+                temp_kw_data, 
+                'ÜBERGABE_BEZUG',
+                'Übergabe Bezug (2020-2024)'
+            )
+            
+            # 2. Übergabe Lieferung - Alle Dateien von 2020-2024
+            data['kw']['uebergabe_lieferung_gesamt'] = self.aggregate_kw_datasets(
+                temp_kw_data,
+                'ÜBERGABE_LIEFERUNG',
+                'Übergabe Lieferung (2020-2024)'
+            )
+            
+            # 3. Kraftwerk Dürnbach - Alle Jahre
+            data['kw']['kw_duernbach_gesamt'] = self.aggregate_kw_datasets(
+                temp_kw_data,
+                'KW DÜRNBACH',
+                'Kraftwerk Dürnbach (2020-2024)'
+            )
+            
+            # 4. Kraftwerk Untersulzbach - Alle Jahre
+            data['kw']['kw_untersulzbach_gesamt'] = self.aggregate_kw_datasets(
+                temp_kw_data,
+                'KW UNTERSULZBACH',
+                'Kraftwerk Untersulzbach (2020-2024)'
+            )
+            
+            # 5. Kraftwerk Wiesbach - Alle Jahre
+            data['kw']['kw_wiesbach_gesamt'] = self.aggregate_kw_datasets(
+                temp_kw_data,
+                'KW WIESBACH',
+                'Kraftwerk Wiesbach (2020-2024)'
+            )
         
         # Zusammenfassung
         print("\n" + "="*60)
