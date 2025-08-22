@@ -1,0 +1,28 @@
+{
+  "file1": {
+    "name": "Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+    "rows": 89202,
+    "columns": 1,
+    "column_names": [
+      "Datum + Uhrzeit,Durchfluss Zähler Fernwärme (m³/h),Rücklauf Zirkulation primär (°C),Zählerstand Zähler Fernwärme (kWh),Zirkulation von Wohnungen (°C),Durchfluss Wasserzähler TWE (m³/h),Kaltwasser (°C),Zählerstand Zirkulation (kWh),Warmwasser vor Zirkulation (°C),Vorlauf Frischwassermodul (°C),Warmwasser nach Zirkulation (°C),Rücklauf Frischwassermodul (°C),Leistung Zähler Fernwärme (W),Durchfluss m³ Zähler Zirkulation (m³/h),Leistung in W Zähler Zirkulation (W)"
+    ]
+  },
+  "file2": {
+    "name": "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+    "rows": 89202,
+    "columns": 1,
+    "column_names": [
+      "Datum + Uhrzeit,Durchfluss Zähler Fernwärme (m³/h),Vorlauf HK1 Ost (°C),Rücklauf Zirkulation primär (°C),Zählerstand Zähler Fernwärme (kWh),Zirkulation von Wohnungen (°C),Durchfluss Wasserzähler TWE (m³/h),Kaltwasser (°C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernwärme (%),Ventil Fernwärme % (%),Zählerstand Zirkulation (kWh),Warmwasser vor Zirkulation (°C),Vorlauf Frischwassermodul (°C),Warmwasser nach Zirkulation (°C),Rücklauf Frischwassermodul (°C),Vorlauf HK2 West (°C),Ventil HK2 West % (%),Leistung Zähler Fernwärme (W),Durchfluss m³ Zähler Zirkulation (m³/h),Leistung in W Zähler Zirkulation (W),Status Ventil HK1 Ost (%)"
+    ]
+  },
+  "comparison": {
+    "common_columns": [],
+    "unique_to_file1": [
+      "Datum + Uhrzeit,Durchfluss Zähler Fernwärme (m³/h),Rücklauf Zirkulation primär (°C),Zählerstand Zähler Fernwärme (kWh),Zirkulation von Wohnungen (°C),Durchfluss Wasserzähler TWE (m³/h),Kaltwasser (°C),Zählerstand Zirkulation (kWh),Warmwasser vor Zirkulation (°C),Vorlauf Frischwassermodul (°C),Warmwasser nach Zirkulation (°C),Rücklauf Frischwassermodul (°C),Leistung Zähler Fernwärme (W),Durchfluss m³ Zähler Zirkulation (m³/h),Leistung in W Zähler Zirkulation (W)"
+    ],
+    "unique_to_file2": [
+      "Datum + Uhrzeit,Durchfluss Zähler Fernwärme (m³/h),Vorlauf HK1 Ost (°C),Rücklauf Zirkulation primär (°C),Zählerstand Zähler Fernwärme (kWh),Zirkulation von Wohnungen (°C),Durchfluss Wasserzähler TWE (m³/h),Kaltwasser (°C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernwärme (%),Ventil Fernwärme % (%),Zählerstand Zirkulation (kWh),Warmwasser vor Zirkulation (°C),Vorlauf Frischwassermodul (°C),Warmwasser nach Zirkulation (°C),Rücklauf Frischwassermodul (°C),Vorlauf HK2 West (°C),Ventil HK2 West % (%),Leistung Zähler Fernwärme (W),Durchfluss m³ Zähler Zirkulation (m³/h),Leistung in W Zähler Zirkulation (W),Status Ventil HK1 Ost (%)"
+    ],
+    "overlap_percentage": 0.0
+  }
+}

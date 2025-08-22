@@ -1,0 +1,2477 @@
+{
+  "analysis_date": "2025-08-21T17:00:03.850676",
+  "datasets": [
+    {
+      "file_name": "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv",
+      "rows": 484,
+      "columns": [
+        "Datum + Uhrzeit,Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto (),Pumpe Zirkulation prim\u00e4r Dauer EIN (),Pumpe Zirkulation sekund\u00e4r Dauer Aus (),Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto (),Status KWZ EIN/AUS (),Pumpe Zirkulation sekund\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r Dauer AUS (),Pumpe Zirkulation sekund\u00e4r Dauer Ein (),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Pumpe HK1 Ost (),Vorlauf HK2 West (\u00b0C),Status Pumpe HK2 West (),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Status Pumpe Zirkulation prim\u00e4r (),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Status Pumpe Pufferladung (),Vorlauf HK1 Ost (\u00b0C),Status Pumpe Zirkulation sekund\u00e4r (),Puffer 2.01 (\u00b0C)"
+      ],
+      "column_count": 1,
+      "data_types": {
+        "Datum + Uhrzeit,Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto (),Pumpe Zirkulation prim\u00e4r Dauer EIN (),Pumpe Zirkulation sekund\u00e4r Dauer Aus (),Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto (),Status KWZ EIN/AUS (),Pumpe Zirkulation sekund\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r Dauer AUS (),Pumpe Zirkulation sekund\u00e4r Dauer Ein (),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Pumpe HK1 Ost (),Vorlauf HK2 West (\u00b0C),Status Pumpe HK2 West (),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Status Pumpe Zirkulation prim\u00e4r (),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Status Pumpe Pufferladung (),Vorlauf HK1 Ost (\u00b0C),Status Pumpe Zirkulation sekund\u00e4r (),Puffer 2.01 (\u00b0C)": "object"
+      },
+      "datetime_columns": [
+        "Datum + Uhrzeit,Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto (),Pumpe Zirkulation prim\u00e4r Dauer EIN (),Pumpe Zirkulation sekund\u00e4r Dauer Aus (),Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto (),Status KWZ EIN/AUS (),Pumpe Zirkulation sekund\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r Dauer AUS (),Pumpe Zirkulation sekund\u00e4r Dauer Ein (),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Pumpe HK1 Ost (),Vorlauf HK2 West (\u00b0C),Status Pumpe HK2 West (),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Status Pumpe Zirkulation prim\u00e4r (),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Status Pumpe Pufferladung (),Vorlauf HK1 Ost (\u00b0C),Status Pumpe Zirkulation sekund\u00e4r (),Puffer 2.01 (\u00b0C)"
+      ],
+      "time_range": {},
+      "numeric_columns": [],
+      "sample_data": [
+        {
+          "Datum + Uhrzeit,Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto (),Pumpe Zirkulation prim\u00e4r Dauer EIN (),Pumpe Zirkulation sekund\u00e4r Dauer Aus (),Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto (),Status KWZ EIN/AUS (),Pumpe Zirkulation sekund\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r Dauer AUS (),Pumpe Zirkulation sekund\u00e4r Dauer Ein (),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Pumpe HK1 Ost (),Vorlauf HK2 West (\u00b0C),Status Pumpe HK2 West (),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Status Pumpe Zirkulation prim\u00e4r (),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Status Pumpe Pufferladung (),Vorlauf HK1 Ost (\u00b0C),Status Pumpe Zirkulation sekund\u00e4r (),Puffer 2.01 (\u00b0C)": null
+        },
+        {
+          "Datum + Uhrzeit,Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto (),Pumpe Zirkulation prim\u00e4r Dauer EIN (),Pumpe Zirkulation sekund\u00e4r Dauer Aus (),Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto (),Status KWZ EIN/AUS (),Pumpe Zirkulation sekund\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r Dauer AUS (),Pumpe Zirkulation sekund\u00e4r Dauer Ein (),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Pumpe HK1 Ost (),Vorlauf HK2 West (\u00b0C),Status Pumpe HK2 West (),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Status Pumpe Zirkulation prim\u00e4r (),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Status Pumpe Pufferladung (),Vorlauf HK1 Ost (\u00b0C),Status Pumpe Zirkulation sekund\u00e4r (),Puffer 2.01 (\u00b0C)": null
+        },
+        {
+          "Datum + Uhrzeit,Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto (),Pumpe Zirkulation prim\u00e4r Dauer EIN (),Pumpe Zirkulation sekund\u00e4r Dauer Aus (),Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto (),Status KWZ EIN/AUS (),Pumpe Zirkulation sekund\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r EIN/AUS (),Pumpe Zirkulation prim\u00e4r Dauer AUS (),Pumpe Zirkulation sekund\u00e4r Dauer Ein (),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Pumpe HK1 Ost (),Vorlauf HK2 West (\u00b0C),Status Pumpe HK2 West (),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Status Pumpe Zirkulation prim\u00e4r (),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Status Pumpe Pufferladung (),Vorlauf HK1 Ost (\u00b0C),Status Pumpe Zirkulation sekund\u00e4r (),Puffer 2.01 (\u00b0C)": null
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "file_name": "Vp.csv",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/Vp.csv",
+      "rows": 7618,
+      "columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)"
+      ],
+      "column_count": 1,
+      "data_types": {
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": "object"
+      },
+      "datetime_columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)"
+      ],
+      "time_range": {},
+      "numeric_columns": [],
+      "sample_data": [
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": null
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "file_name": "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/2024/All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+      "rows": 8322,
+      "columns": [
+        "Datum + Uhrzeit,Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Ventil HK1 Ost % (%),Ventil Fernw\u00e4rme % (%),Drehzahl Pumpe Pufferladung (%),Ventil HK2 West % (%),Vorlauf HK2 West (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Vorlauf HK1 Ost (\u00b0C),Puffer 2.01 (\u00b0C),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),Status Drehzahl Pumpe Pufferladung (%),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Status Ventil HK2 West (%),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Status Ventil Fernw\u00e4rme (%),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Ventil HK1 Ost (%),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)"
+      ],
+      "column_count": 1,
+      "data_types": {
+        "Datum + Uhrzeit,Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Ventil HK1 Ost % (%),Ventil Fernw\u00e4rme % (%),Drehzahl Pumpe Pufferladung (%),Ventil HK2 West % (%),Vorlauf HK2 West (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Vorlauf HK1 Ost (\u00b0C),Puffer 2.01 (\u00b0C),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),Status Drehzahl Pumpe Pufferladung (%),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Status Ventil HK2 West (%),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Status Ventil Fernw\u00e4rme (%),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Ventil HK1 Ost (%),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)": "object"
+      },
+      "datetime_columns": [
+        "Datum + Uhrzeit,Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Ventil HK1 Ost % (%),Ventil Fernw\u00e4rme % (%),Drehzahl Pumpe Pufferladung (%),Ventil HK2 West % (%),Vorlauf HK2 West (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Vorlauf HK1 Ost (\u00b0C),Puffer 2.01 (\u00b0C),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),Status Drehzahl Pumpe Pufferladung (%),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Status Ventil HK2 West (%),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Status Ventil Fernw\u00e4rme (%),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Ventil HK1 Ost (%),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)"
+      ],
+      "time_range": {},
+      "numeric_columns": [],
+      "sample_data": [
+        {
+          "Datum + Uhrzeit,Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Ventil HK1 Ost % (%),Ventil Fernw\u00e4rme % (%),Drehzahl Pumpe Pufferladung (%),Ventil HK2 West % (%),Vorlauf HK2 West (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Vorlauf HK1 Ost (\u00b0C),Puffer 2.01 (\u00b0C),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),Status Drehzahl Pumpe Pufferladung (%),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Status Ventil HK2 West (%),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Status Ventil Fernw\u00e4rme (%),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Ventil HK1 Ost (%),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)": null
+        },
+        {
+          "Datum + Uhrzeit,Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Ventil HK1 Ost % (%),Ventil Fernw\u00e4rme % (%),Drehzahl Pumpe Pufferladung (%),Ventil HK2 West % (%),Vorlauf HK2 West (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Vorlauf HK1 Ost (\u00b0C),Puffer 2.01 (\u00b0C),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),Status Drehzahl Pumpe Pufferladung (%),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Status Ventil HK2 West (%),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Status Ventil Fernw\u00e4rme (%),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Ventil HK1 Ost (%),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)": null
+        },
+        {
+          "Datum + Uhrzeit,Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Ventil HK1 Ost % (%),Ventil Fernw\u00e4rme % (%),Drehzahl Pumpe Pufferladung (%),Ventil HK2 West % (%),Vorlauf HK2 West (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Zirkulation zu Wohnungen (\u00b0C),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%),Vorlauf HK1 Ost (\u00b0C),Puffer 2.01 (\u00b0C),Puffer 2.05 (\u00b0C),Vorlauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf HK1 Ost (\u00b0C),R\u00fccklauf HK2 West (\u00b0C),Status Drehzahl Pumpe Pufferladung (%),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Vorlauf EV prim\u00e4r (\u00b0C),Kaltwasser (\u00b0C),Vorlauf Zirkulation prim\u00e4r (\u00b0C),Status Ventil HK2 West (%),Puffer 2.02 (\u00b0C),Puffer 2.06 (\u00b0C),Aussenf\u00fchler (\u00b0C),R\u00fccklauf EV sekund\u00e4r (\u00b0C),R\u00fccklauf EV prim\u00e4r (\u00b0C),Leistung in W Z\u00e4hler Zirkulation (W),Puffer 2.04 (\u00b0C),Puffer 2.08 (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Status Ventil Fernw\u00e4rme (%),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),Z\u00e4hlerstand Wasserz\u00e4hler TWE ( ),R\u00fccklauf Frischwassermodul (\u00b0C),Puffer 2.03 (\u00b0C),Puffer 2.07 (\u00b0C),Status Ventil HK1 Ost (%),Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)": null
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "file_name": "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/2024/Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+      "rows": 89202,
+      "columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Vorlauf HK1 Ost (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernw\u00e4rme (%),Ventil Fernw\u00e4rme % (%),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Vorlauf HK2 West (\u00b0C),Ventil HK2 West % (%),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Status Ventil HK1 Ost (%)"
+      ],
+      "column_count": 1,
+      "data_types": {
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Vorlauf HK1 Ost (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernw\u00e4rme (%),Ventil Fernw\u00e4rme % (%),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Vorlauf HK2 West (\u00b0C),Ventil HK2 West % (%),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Status Ventil HK1 Ost (%)": "object"
+      },
+      "datetime_columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Vorlauf HK1 Ost (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernw\u00e4rme (%),Ventil Fernw\u00e4rme % (%),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Vorlauf HK2 West (\u00b0C),Ventil HK2 West % (%),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Status Ventil HK1 Ost (%)"
+      ],
+      "time_range": {},
+      "numeric_columns": [],
+      "sample_data": [
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Vorlauf HK1 Ost (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernw\u00e4rme (%),Ventil Fernw\u00e4rme % (%),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Vorlauf HK2 West (\u00b0C),Ventil HK2 West % (%),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Status Ventil HK1 Ost (%)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Vorlauf HK1 Ost (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernw\u00e4rme (%),Ventil Fernw\u00e4rme % (%),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Vorlauf HK2 West (\u00b0C),Ventil HK2 West % (%),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Status Ventil HK1 Ost (%)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Vorlauf HK1 Ost (\u00b0C),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Status Ventil HK2 West (%),Ventil HK1 Ost % (%),Status Ventil Fernw\u00e4rme (%),Ventil Fernw\u00e4rme % (%),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Vorlauf HK2 West (\u00b0C),Ventil HK2 West % (%),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W),Status Ventil HK1 Ost (%)": null
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "file_name": "Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/2024/Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+      "rows": 89202,
+      "columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W)"
+      ],
+      "column_count": 1,
+      "data_types": {
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W)": "object"
+      },
+      "datetime_columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W)"
+      ],
+      "time_range": {},
+      "numeric_columns": [],
+      "sample_data": [
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C),Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh),Zirkulation von Wohnungen (\u00b0C),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Kaltwasser (\u00b0C),Z\u00e4hlerstand Zirkulation (kWh),Warmwasser vor Zirkulation (\u00b0C),Vorlauf Frischwassermodul (\u00b0C),Warmwasser nach Zirkulation (\u00b0C),R\u00fccklauf Frischwassermodul (\u00b0C),Leistung Z\u00e4hler Fernw\u00e4rme (W),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h),Leistung in W Z\u00e4hler Zirkulation (W)": null
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "file_name": "export_2011_2024-01-01-00-00_2024-12-31-23-59.csv",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/2024/Durchflu\u00df/export_2011_2024-01-01-00-00_2024-12-31-23-59.csv",
+      "rows": 89202,
+      "columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)"
+      ],
+      "column_count": 1,
+      "data_types": {
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": "object"
+      },
+      "datetime_columns": [
+        "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)"
+      ],
+      "time_range": {},
+      "numeric_columns": [],
+      "sample_data": [
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": null
+        },
+        {
+          "Datum + Uhrzeit,Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h),Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h),Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": null
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "file_name": "Monitoring_ERS.xlsx",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/2024/Monitoring_ERS.xlsx",
+      "sheets": {
+        "Daten": {
+          "rows": 8325,
+          "columns": [
+            "Unnamed: 0",
+            "Datum + Uhrzeit",
+            "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+            "Ventil HK1 Ost % (%)",
+            "Ventil Fernw\u00e4rme % (%)",
+            "Drehzahl Pumpe Pufferladung (%)",
+            "Ventil HK2 West % (%)",
+            "Vorlauf HK2 West (\u00b0C)",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+            "Zirkulation zu Wohnungen (\u00b0C)",
+            "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)",
+            "Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+            "Vorlauf HK1 Ost (\u00b0C)",
+            "Puffer 2.01 (\u00b0C)",
+            "Puffer 2.05 (\u00b0C)",
+            "Vorlauf EV sekund\u00e4r (\u00b0C)",
+            "R\u00fccklauf HK1 Ost (\u00b0C)",
+            "R\u00fccklauf HK2 West (\u00b0C)",
+            "Status Drehzahl Pumpe Pufferladung (%)",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+            "Zirkulation von Wohnungen (\u00b0C)",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+            "Vorlauf EV prim\u00e4r (\u00b0C)",
+            "Kaltwasser (\u00b0C)",
+            "Vorlauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Status Ventil HK2 West (%)",
+            "Puffer 2.02 (\u00b0C)",
+            "Puffer 2.06 (\u00b0C)",
+            "Aussenf\u00fchler (\u00b0C)",
+            "R\u00fccklauf EV sekund\u00e4r (\u00b0C)",
+            "R\u00fccklauf EV prim\u00e4r (\u00b0C)",
+            "Leistung in W Z\u00e4hler Zirkulation (W)",
+            "Puffer 2.04 (\u00b0C)",
+            "Puffer 2.08 (\u00b0C)",
+            "Z\u00e4hlerstand Zirkulation (kWh)",
+            "Status Ventil Fernw\u00e4rme (%)",
+            "Warmwasser vor Zirkulation (\u00b0C)",
+            "Vorlauf Frischwassermodul (\u00b0C)",
+            "Warmwasser nach Zirkulation (\u00b0C)",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE ( )",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)",
+            "Puffer 2.03 (\u00b0C)",
+            "Puffer 2.07 (\u00b0C)",
+            "Status Ventil HK1 Ost (%)",
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)"
+          ],
+          "column_count": 46,
+          "data_types": {
+            "Unnamed: 0": "object",
+            "Datum + Uhrzeit": "datetime64[ns]",
+            "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)": "float64",
+            "Ventil HK1 Ost % (%)": "float64",
+            "Ventil Fernw\u00e4rme % (%)": "float64",
+            "Drehzahl Pumpe Pufferladung (%)": "float64",
+            "Ventil HK2 West % (%)": "float64",
+            "Vorlauf HK2 West (\u00b0C)": "int64",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)": "int64",
+            "Zirkulation zu Wohnungen (\u00b0C)": "int64",
+            "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": "float64",
+            "Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%)": "int64",
+            "Vorlauf HK1 Ost (\u00b0C)": "int64",
+            "Puffer 2.01 (\u00b0C)": "int64",
+            "Puffer 2.05 (\u00b0C)": "int64",
+            "Vorlauf EV sekund\u00e4r (\u00b0C)": "int64",
+            "R\u00fccklauf HK1 Ost (\u00b0C)": "int64",
+            "R\u00fccklauf HK2 West (\u00b0C)": "int64",
+            "Status Drehzahl Pumpe Pufferladung (%)": "int64",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)": "int64",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)": "int64",
+            "Zirkulation von Wohnungen (\u00b0C)": "int64",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)": "int64",
+            "Vorlauf EV prim\u00e4r (\u00b0C)": "int64",
+            "Kaltwasser (\u00b0C)": "int64",
+            "Vorlauf Zirkulation prim\u00e4r (\u00b0C)": "int64",
+            "Status Ventil HK2 West (%)": "int64",
+            "Puffer 2.02 (\u00b0C)": "int64",
+            "Puffer 2.06 (\u00b0C)": "int64",
+            "Aussenf\u00fchler (\u00b0C)": "int64",
+            "R\u00fccklauf EV sekund\u00e4r (\u00b0C)": "int64",
+            "R\u00fccklauf EV prim\u00e4r (\u00b0C)": "int64",
+            "Leistung in W Z\u00e4hler Zirkulation (W)": "int64",
+            "Puffer 2.04 (\u00b0C)": "int64",
+            "Puffer 2.08 (\u00b0C)": "int64",
+            "Z\u00e4hlerstand Zirkulation (kWh)": "int64",
+            "Status Ventil Fernw\u00e4rme (%)": "int64",
+            "Warmwasser vor Zirkulation (\u00b0C)": "int64",
+            "Vorlauf Frischwassermodul (\u00b0C)": "int64",
+            "Warmwasser nach Zirkulation (\u00b0C)": "int64",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE ( )": "int64",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)": "int64",
+            "Puffer 2.03 (\u00b0C)": "int64",
+            "Puffer 2.07 (\u00b0C)": "int64",
+            "Status Ventil HK1 Ost (%)": "int64",
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)": "float64"
+          },
+          "datetime_columns": [
+            "Datum + Uhrzeit"
+          ],
+          "time_range": {
+            "Datum + Uhrzeit": {
+              "min": "1900-01-30 23:55:00",
+              "max": "2024-07-31 23:55:00"
+            }
+          },
+          "numeric_columns": [
+            "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+            "Ventil HK1 Ost % (%)",
+            "Ventil Fernw\u00e4rme % (%)",
+            "Drehzahl Pumpe Pufferladung (%)",
+            "Ventil HK2 West % (%)",
+            "Vorlauf HK2 West (\u00b0C)",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+            "Zirkulation zu Wohnungen (\u00b0C)",
+            "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)",
+            "Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+            "Vorlauf HK1 Ost (\u00b0C)",
+            "Puffer 2.01 (\u00b0C)",
+            "Puffer 2.05 (\u00b0C)",
+            "Vorlauf EV sekund\u00e4r (\u00b0C)",
+            "R\u00fccklauf HK1 Ost (\u00b0C)",
+            "R\u00fccklauf HK2 West (\u00b0C)",
+            "Status Drehzahl Pumpe Pufferladung (%)",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+            "Zirkulation von Wohnungen (\u00b0C)",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+            "Vorlauf EV prim\u00e4r (\u00b0C)",
+            "Kaltwasser (\u00b0C)",
+            "Vorlauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Status Ventil HK2 West (%)",
+            "Puffer 2.02 (\u00b0C)",
+            "Puffer 2.06 (\u00b0C)",
+            "Aussenf\u00fchler (\u00b0C)",
+            "R\u00fccklauf EV sekund\u00e4r (\u00b0C)",
+            "R\u00fccklauf EV prim\u00e4r (\u00b0C)",
+            "Leistung in W Z\u00e4hler Zirkulation (W)",
+            "Puffer 2.04 (\u00b0C)",
+            "Puffer 2.08 (\u00b0C)",
+            "Z\u00e4hlerstand Zirkulation (kWh)",
+            "Status Ventil Fernw\u00e4rme (%)",
+            "Warmwasser vor Zirkulation (\u00b0C)",
+            "Vorlauf Frischwassermodul (\u00b0C)",
+            "Warmwasser nach Zirkulation (\u00b0C)",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE ( )",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)",
+            "Puffer 2.03 (\u00b0C)",
+            "Puffer 2.07 (\u00b0C)",
+            "Status Ventil HK1 Ost (%)",
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)"
+          ],
+          "parameters": [
+            {
+              "name": "Unnamed: 0",
+              "dtype": "object",
+              "unique_values": 3,
+              "null_count": "8322"
+            },
+            {
+              "name": "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "8322",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Ventil HK1 Ost % (%)",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "8322",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Ventil Fernw\u00e4rme % (%)",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "8322",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Drehzahl Pumpe Pufferladung (%)",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "8322",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Ventil HK2 West % (%)",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "8322",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Vorlauf HK2 West (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 31,
+              "null_count": "0",
+              "min": 24.0,
+              "max": 54.0
+            },
+            {
+              "name": "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+              "dtype": "int64",
+              "unique_values": 607,
+              "null_count": "0",
+              "min": -30300.0,
+              "max": 218800.0
+            },
+            {
+              "name": "Zirkulation zu Wohnungen (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 9,
+              "null_count": "0",
+              "min": 7.0,
+              "max": 62.0
+            },
+            {
+              "name": "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)",
+              "dtype": "float64",
+              "unique_values": 6,
+              "null_count": "0",
+              "min": 0.040000000000000036,
+              "max": 0.61
+            },
+            {
+              "name": "Status Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+              "dtype": "int64",
+              "unique_values": 2,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 25.0
+            },
+            {
+              "name": "Vorlauf HK1 Ost (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 31,
+              "null_count": "0",
+              "min": 25.0,
+              "max": 55.0
+            },
+            {
+              "name": "Puffer 2.01 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 14,
+              "null_count": "0",
+              "min": 12.0,
+              "max": 68.0
+            },
+            {
+              "name": "Puffer 2.05 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 9,
+              "null_count": "0",
+              "min": 7.0,
+              "max": 65.0
+            },
+            {
+              "name": "Vorlauf EV sekund\u00e4r (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 51,
+              "null_count": "0",
+              "min": 36.0,
+              "max": 90.0
+            },
+            {
+              "name": "R\u00fccklauf HK1 Ost (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 30,
+              "null_count": "0",
+              "min": 23.0,
+              "max": 52.0
+            },
+            {
+              "name": "R\u00fccklauf HK2 West (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 29,
+              "null_count": "0",
+              "min": 24.0,
+              "max": 52.0
+            },
+            {
+              "name": "Status Drehzahl Pumpe Pufferladung (%)",
+              "dtype": "int64",
+              "unique_values": 3,
+              "null_count": "0",
+              "min": 1.0,
+              "max": 50.0
+            },
+            {
+              "name": "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 7,
+              "null_count": "0",
+              "min": 5.0,
+              "max": 56.0
+            },
+            {
+              "name": "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+              "dtype": "int64",
+              "unique_values": 619,
+              "null_count": "0",
+              "min": 6330.0,
+              "max": 1159320.0
+            },
+            {
+              "name": "Zirkulation von Wohnungen (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 7,
+              "null_count": "0",
+              "min": 5.0,
+              "max": 56.0
+            },
+            {
+              "name": "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+              "dtype": "int64",
+              "unique_values": 1,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Vorlauf EV prim\u00e4r (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 15,
+              "null_count": "0",
+              "min": 14.0,
+              "max": 93.0
+            },
+            {
+              "name": "Kaltwasser (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 12,
+              "null_count": "0",
+              "min": 10.0,
+              "max": 25.0
+            },
+            {
+              "name": "Vorlauf Zirkulation prim\u00e4r (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 13,
+              "null_count": "0",
+              "min": 11.0,
+              "max": 67.0
+            },
+            {
+              "name": "Status Ventil HK2 West (%)",
+              "dtype": "int64",
+              "unique_values": 50,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 99.0
+            },
+            {
+              "name": "Puffer 2.02 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 13,
+              "null_count": "0",
+              "min": 11.0,
+              "max": 67.0
+            },
+            {
+              "name": "Puffer 2.06 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 8,
+              "null_count": "0",
+              "min": 6.0,
+              "max": 64.0
+            },
+            {
+              "name": "Aussenf\u00fchler (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 30,
+              "null_count": "0",
+              "min": 11.0,
+              "max": 40.0
+            },
+            {
+              "name": "R\u00fccklauf EV sekund\u00e4r (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 32,
+              "null_count": "0",
+              "min": 25.0,
+              "max": 60.0
+            },
+            {
+              "name": "R\u00fccklauf EV prim\u00e4r (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 36,
+              "null_count": "0",
+              "min": 39.0,
+              "max": 92.0
+            },
+            {
+              "name": "Leistung in W Z\u00e4hler Zirkulation (W)",
+              "dtype": "int64",
+              "unique_values": 64,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 6800.0
+            },
+            {
+              "name": "Puffer 2.04 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 12,
+              "null_count": "0",
+              "min": 10.0,
+              "max": 66.0
+            },
+            {
+              "name": "Puffer 2.08 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 34,
+              "null_count": "0",
+              "min": 30.0,
+              "max": 63.0
+            },
+            {
+              "name": "Z\u00e4hlerstand Zirkulation (kWh)",
+              "dtype": "int64",
+              "unique_values": 2799,
+              "null_count": "0",
+              "min": 2889.0,
+              "max": 140903.0
+            },
+            {
+              "name": "Status Ventil Fernw\u00e4rme (%)",
+              "dtype": "int64",
+              "unique_values": 10,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 78.0
+            },
+            {
+              "name": "Warmwasser vor Zirkulation (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 37,
+              "null_count": "0",
+              "min": 28.0,
+              "max": 64.0
+            },
+            {
+              "name": "Vorlauf Frischwassermodul (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 13,
+              "null_count": "0",
+              "min": 11.0,
+              "max": 67.0
+            },
+            {
+              "name": "Warmwasser nach Zirkulation (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 10,
+              "null_count": "0",
+              "min": 8.0,
+              "max": 63.0
+            },
+            {
+              "name": "Z\u00e4hlerstand Wasserz\u00e4hler TWE ( )",
+              "dtype": "int64",
+              "unique_values": 50,
+              "null_count": "0",
+              "min": 48.0,
+              "max": 2382.0
+            },
+            {
+              "name": "R\u00fccklauf Frischwassermodul (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 45,
+              "null_count": "0",
+              "min": 18.0,
+              "max": 64.0
+            },
+            {
+              "name": "Puffer 2.03 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 13,
+              "null_count": "0",
+              "min": 11.0,
+              "max": 67.0
+            },
+            {
+              "name": "Puffer 2.07 (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 18,
+              "null_count": "0",
+              "min": 17.0,
+              "max": 64.0
+            },
+            {
+              "name": "Status Ventil HK1 Ost (%)",
+              "dtype": "int64",
+              "unique_values": 49,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 99.0
+            },
+            {
+              "name": "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+              "dtype": "float64",
+              "unique_values": 172,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 6.67
+            }
+          ]
+        },
+        "Analyse": {
+          "rows": 2,
+          "columns": [
+            "Unnamed: 0",
+            "Datum + Uhrzeit",
+            "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+            "Ventil HK1 Ost % (%)",
+            "Ventil Fernw\u00e4rme % (%)"
+          ],
+          "column_count": 5,
+          "data_types": {
+            "Unnamed: 0": "object",
+            "Datum + Uhrzeit": "float64",
+            "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)": "float64",
+            "Ventil HK1 Ost % (%)": "float64",
+            "Ventil Fernw\u00e4rme % (%)": "float64"
+          },
+          "datetime_columns": [
+            "Datum + Uhrzeit"
+          ],
+          "time_range": {},
+          "numeric_columns": [
+            "Datum + Uhrzeit",
+            "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+            "Ventil HK1 Ost % (%)",
+            "Ventil Fernw\u00e4rme % (%)"
+          ],
+          "parameters": [
+            {
+              "name": "Unnamed: 0",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "0"
+            },
+            {
+              "name": "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "2",
+              "min": null,
+              "max": null
+            },
+            {
+              "name": "Ventil HK1 Ost % (%)",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "2",
+              "min": null,
+              "max": null
+            },
+            {
+              "name": "Ventil Fernw\u00e4rme % (%)",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "2",
+              "min": null,
+              "max": null
+            }
+          ]
+        }
+      },
+      "sheet_count": 2
+    },
+    {
+      "file_name": "Monitoring_ERS_2024_V2_250506.xlsx",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/2024/Monitoring_ERS_2024_V2_250506.xlsx",
+      "sheets": {
+        "Auswahl": {
+          "rows": 487,
+          "columns": [
+            "Datum + Uhrzeit",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE (m\u00b3 )",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "Unnamed: 12",
+            "Unnamed: 13",
+            "Unnamed: 14",
+            "Unnamed: 15"
+          ],
+          "column_count": 16,
+          "data_types": {
+            "Datum + Uhrzeit": "object",
+            "Unnamed: 1": "object",
+            "Unnamed: 2": "object",
+            "Unnamed: 3": "object",
+            "Unnamed: 4": "object",
+            "Unnamed: 5": "object",
+            "Unnamed: 6": "object",
+            "Unnamed: 7": "object",
+            "Unnamed: 8": "object",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE (m\u00b3 )": "object",
+            "Unnamed: 10": "object",
+            "Unnamed: 11": "object",
+            "Unnamed: 12": "object",
+            "Unnamed: 13": "object",
+            "Unnamed: 14": "object",
+            "Unnamed: 15": "object"
+          },
+          "datetime_columns": [
+            "Datum + Uhrzeit"
+          ],
+          "time_range": {},
+          "numeric_columns": [],
+          "parameters": [
+            {
+              "name": "Unnamed: 1",
+              "dtype": "object",
+              "unique_values": 195,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "object",
+              "unique_values": 177,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "unique_values": 376,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "object",
+              "unique_values": 470,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "object",
+              "unique_values": 328,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 6",
+              "dtype": "object",
+              "unique_values": 333,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 7",
+              "dtype": "object",
+              "unique_values": 475,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 8",
+              "dtype": "object",
+              "unique_values": 485,
+              "null_count": "2"
+            },
+            {
+              "name": "Z\u00e4hlerstand Wasserz\u00e4hler TWE (m\u00b3 )",
+              "dtype": "object",
+              "unique_values": 398,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 10",
+              "dtype": "object",
+              "unique_values": 9,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 11",
+              "dtype": "object",
+              "unique_values": 245,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 12",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 13",
+              "dtype": "object",
+              "unique_values": 485,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 14",
+              "dtype": "object",
+              "unique_values": 485,
+              "null_count": "2"
+            },
+            {
+              "name": "Unnamed: 15",
+              "dtype": "object",
+              "unique_values": 182,
+              "null_count": "3"
+            }
+          ]
+        },
+        "All 01.12.23 - 31.03.25": {
+          "rows": 486,
+          "columns": [
+            "Datum + Uhrzeit",
+            "Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto ()",
+            "Pumpe Zirkulation prim\u00e4r Dauer EIN ()",
+            "Pumpe Zirkulation sekund\u00e4r Dauer Aus ()",
+            "Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto ()",
+            "Status KWZ EIN/AUS ()",
+            "Pumpe Zirkulation sekund\u00e4r EIN/AUS ()",
+            "Pumpe Zirkulation prim\u00e4r EIN/AUS ()",
+            "Pumpe Zirkulation prim\u00e4r Dauer AUS ()",
+            "Pumpe Zirkulation sekund\u00e4r Dauer Ein ()",
+            "Puffer 2.05 (\u00b0C)",
+            "Vorlauf Fernw\u00e4rme sekund\u00e4r (\u00b0C)",
+            "R\u00fccklauf HK1 Ost (\u00b0C)",
+            "R\u00fccklauf HK2 West (\u00b0C)",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+            "Zirkulation von Wohnungen (\u00b0C)",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+            "Vorlauf EV prim\u00e4r (\u00b0C)",
+            "Kaltwasser (\u00b0C)",
+            "Vorlauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Puffer 2.02 (\u00b0C)",
+            "Puffer 2.06 (\u00b0C)",
+            "Aussenf\u00fchler (\u00b0C)",
+            "R\u00fccklauf Fernw\u00e4rmesekund\u00e4r (\u00b0C)",
+            "R\u00fccklauf EV prim\u00e4r (\u00b0C)",
+            "Z\u00e4hlerstand Zirkulation (kWh)",
+            "Warmwasser vor Zirkulation (\u00b0C)",
+            "Vorlauf Frischwassermodul (\u00b0C)",
+            "Warmwasser nach Zirkulation (\u00b0C)",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE (m\u00b3 )",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)",
+            "Puffer 2.03 (\u00b0C)",
+            "Puffer 2.07 (\u00b0C)",
+            "Status Pumpe HK1 Ost ()",
+            "Vorlauf HK2 West (\u00b0C)",
+            "Status Pumpe HK2 West ()",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+            "Zirkulation zu Wohnungen (\u00b0C)",
+            "Durchfluss Z\u00e4hler Zirkulation (m\u00b3/h)",
+            "Leistung Z\u00e4hler Zirkulation (W)",
+            "Puffer 2.04 (\u00b0C)",
+            "Puffer 2.08 (\u00b0C)",
+            "Status Pumpe Zirkulation prim\u00e4r ()",
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+            "Status Pumpe Pufferladung ()",
+            "Vorlauf HK1 Ost (\u00b0C)",
+            "Status Pumpe Zirkulation sekund\u00e4r ()",
+            "Puffer 2.01 (\u00b0C)"
+          ],
+          "column_count": 49,
+          "data_types": {
+            "Datum + Uhrzeit": "object",
+            "Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto ()": "object",
+            "Pumpe Zirkulation prim\u00e4r Dauer EIN ()": "object",
+            "Pumpe Zirkulation sekund\u00e4r Dauer Aus ()": "object",
+            "Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto ()": "object",
+            "Status KWZ EIN/AUS ()": "object",
+            "Pumpe Zirkulation sekund\u00e4r EIN/AUS ()": "object",
+            "Pumpe Zirkulation prim\u00e4r EIN/AUS ()": "object",
+            "Pumpe Zirkulation prim\u00e4r Dauer AUS ()": "object",
+            "Pumpe Zirkulation sekund\u00e4r Dauer Ein ()": "object",
+            "Puffer 2.05 (\u00b0C)": "object",
+            "Vorlauf Fernw\u00e4rme sekund\u00e4r (\u00b0C)": "object",
+            "R\u00fccklauf HK1 Ost (\u00b0C)": "object",
+            "R\u00fccklauf HK2 West (\u00b0C)": "object",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)": "object",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)": "object",
+            "Zirkulation von Wohnungen (\u00b0C)": "object",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)": "object",
+            "Vorlauf EV prim\u00e4r (\u00b0C)": "object",
+            "Kaltwasser (\u00b0C)": "object",
+            "Vorlauf Zirkulation prim\u00e4r (\u00b0C)": "object",
+            "Puffer 2.02 (\u00b0C)": "object",
+            "Puffer 2.06 (\u00b0C)": "object",
+            "Aussenf\u00fchler (\u00b0C)": "object",
+            "R\u00fccklauf Fernw\u00e4rmesekund\u00e4r (\u00b0C)": "object",
+            "R\u00fccklauf EV prim\u00e4r (\u00b0C)": "object",
+            "Z\u00e4hlerstand Zirkulation (kWh)": "object",
+            "Warmwasser vor Zirkulation (\u00b0C)": "object",
+            "Vorlauf Frischwassermodul (\u00b0C)": "object",
+            "Warmwasser nach Zirkulation (\u00b0C)": "object",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE (m\u00b3 )": "object",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)": "object",
+            "Puffer 2.03 (\u00b0C)": "object",
+            "Puffer 2.07 (\u00b0C)": "object",
+            "Status Pumpe HK1 Ost ()": "object",
+            "Vorlauf HK2 West (\u00b0C)": "object",
+            "Status Pumpe HK2 West ()": "object",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)": "object",
+            "Zirkulation zu Wohnungen (\u00b0C)": "object",
+            "Durchfluss Z\u00e4hler Zirkulation (m\u00b3/h)": "object",
+            "Leistung Z\u00e4hler Zirkulation (W)": "object",
+            "Puffer 2.04 (\u00b0C)": "object",
+            "Puffer 2.08 (\u00b0C)": "object",
+            "Status Pumpe Zirkulation prim\u00e4r ()": "object",
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)": "object",
+            "Status Pumpe Pufferladung ()": "object",
+            "Vorlauf HK1 Ost (\u00b0C)": "object",
+            "Status Pumpe Zirkulation sekund\u00e4r ()": "object",
+            "Puffer 2.01 (\u00b0C)": "object"
+          },
+          "datetime_columns": [
+            "Datum + Uhrzeit"
+          ],
+          "time_range": {},
+          "numeric_columns": [],
+          "parameters": [
+            {
+              "name": "Pumpe Zirkulation sekund\u00e4r Zwang AUS/Auto ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Pumpe Zirkulation prim\u00e4r Dauer EIN ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Pumpe Zirkulation sekund\u00e4r Dauer Aus ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Pumpe Zirkulation prim\u00e4r Zwang AUS/Auto ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Status KWZ EIN/AUS ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Pumpe Zirkulation sekund\u00e4r EIN/AUS ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Pumpe Zirkulation prim\u00e4r EIN/AUS ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Pumpe Zirkulation prim\u00e4r Dauer AUS ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Pumpe Zirkulation sekund\u00e4r Dauer Ein ()",
+              "dtype": "object",
+              "unique_values": 1,
+              "null_count": "485"
+            },
+            {
+              "name": "Puffer 2.05 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 309,
+              "null_count": "1"
+            },
+            {
+              "name": "Vorlauf Fernw\u00e4rme sekund\u00e4r (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 328,
+              "null_count": "1"
+            },
+            {
+              "name": "R\u00fccklauf HK1 Ost (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 349,
+              "null_count": "1"
+            },
+            {
+              "name": "R\u00fccklauf HK2 West (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 326,
+              "null_count": "1"
+            },
+            {
+              "name": "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 136,
+              "null_count": "1"
+            },
+            {
+              "name": "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+              "dtype": "object",
+              "unique_values": 485,
+              "null_count": "1"
+            },
+            {
+              "name": "Zirkulation von Wohnungen (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 177,
+              "null_count": "1"
+            },
+            {
+              "name": "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "1"
+            },
+            {
+              "name": "Vorlauf EV prim\u00e4r (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 416,
+              "null_count": "1"
+            },
+            {
+              "name": "Kaltwasser (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 376,
+              "null_count": "1"
+            },
+            {
+              "name": "Vorlauf Zirkulation prim\u00e4r (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 209,
+              "null_count": "1"
+            },
+            {
+              "name": "Puffer 2.02 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 206,
+              "null_count": "1"
+            },
+            {
+              "name": "Puffer 2.06 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 307,
+              "null_count": "1"
+            },
+            {
+              "name": "Aussenf\u00fchler (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 441,
+              "null_count": "1"
+            },
+            {
+              "name": "R\u00fccklauf Fernw\u00e4rmesekund\u00e4r (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 333,
+              "null_count": "1"
+            },
+            {
+              "name": "R\u00fccklauf EV prim\u00e4r (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 353,
+              "null_count": "1"
+            },
+            {
+              "name": "Z\u00e4hlerstand Zirkulation (kWh)",
+              "dtype": "object",
+              "unique_values": 485,
+              "null_count": "1"
+            },
+            {
+              "name": "Warmwasser vor Zirkulation (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 338,
+              "null_count": "1"
+            },
+            {
+              "name": "Vorlauf Frischwassermodul (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 263,
+              "null_count": "1"
+            },
+            {
+              "name": "Warmwasser nach Zirkulation (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 188,
+              "null_count": "1"
+            },
+            {
+              "name": "Z\u00e4hlerstand Wasserz\u00e4hler TWE (m\u00b3 )",
+              "dtype": "object",
+              "unique_values": 398,
+              "null_count": "1"
+            },
+            {
+              "name": "R\u00fccklauf Frischwassermodul (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 400,
+              "null_count": "1"
+            },
+            {
+              "name": "Puffer 2.03 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 214,
+              "null_count": "1"
+            },
+            {
+              "name": "Puffer 2.07 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 297,
+              "null_count": "1"
+            },
+            {
+              "name": "Status Pumpe HK1 Ost ()",
+              "dtype": "object",
+              "unique_values": 63,
+              "null_count": "1"
+            },
+            {
+              "name": "Vorlauf HK2 West (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 348,
+              "null_count": "1"
+            },
+            {
+              "name": "Status Pumpe HK2 West ()",
+              "dtype": "object",
+              "unique_values": 64,
+              "null_count": "1"
+            },
+            {
+              "name": "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+              "dtype": "object",
+              "unique_values": 485,
+              "null_count": "1"
+            },
+            {
+              "name": "Zirkulation zu Wohnungen (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 195,
+              "null_count": "1"
+            },
+            {
+              "name": "Durchfluss Z\u00e4hler Zirkulation (m\u00b3/h)",
+              "dtype": "object",
+              "unique_values": 9,
+              "null_count": "1"
+            },
+            {
+              "name": "Leistung Z\u00e4hler Zirkulation (W)",
+              "dtype": "object",
+              "unique_values": 475,
+              "null_count": "1"
+            },
+            {
+              "name": "Puffer 2.04 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 220,
+              "null_count": "1"
+            },
+            {
+              "name": "Puffer 2.08 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 381,
+              "null_count": "1"
+            },
+            {
+              "name": "Status Pumpe Zirkulation prim\u00e4r ()",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "1"
+            },
+            {
+              "name": "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+              "dtype": "object",
+              "unique_values": 245,
+              "null_count": "1"
+            },
+            {
+              "name": "Status Pumpe Pufferladung ()",
+              "dtype": "object",
+              "unique_values": 62,
+              "null_count": "1"
+            },
+            {
+              "name": "Vorlauf HK1 Ost (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 369,
+              "null_count": "1"
+            },
+            {
+              "name": "Status Pumpe Zirkulation sekund\u00e4r ()",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "1"
+            },
+            {
+              "name": "Puffer 2.01 (\u00b0C)",
+              "dtype": "object",
+              "unique_values": 223,
+              "null_count": "1"
+            }
+          ]
+        }
+      },
+      "sheet_count": 4
+    },
+    {
+      "file_name": "Monitoring_ERS_24-07_all.xlsx",
+      "file_path": "/mnt/c/Users/admin/OneDrive - Fachhochschule Salzburg GmbH/MokiG/OneDrive_1_18.8.2025/Daten/Monitoringdaten/Erentrudisstr/Monitoring/2024/Monitoring_ERS_24-07_all.xlsx",
+      "sheets": {
+        "24-07_All": {
+          "rows": 8325,
+          "columns": [
+            "Min",
+            "2024-07-01 00:00:00",
+            0,
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            24,
+            -30300,
+            55,
+            0.57,
+            25,
+            "25.1",
+            56,
+            58,
+            36,
+            23,
+            "24.1",
+            49,
+            51,
+            1152990,
+            "51.1",
+            "0.5",
+            79,
+            15,
+            "56.1",
+            "0.6",
+            "56.2",
+            "58.1",
+            11,
+            "25.2",
+            53,
+            "0.7",
+            "56.3",
+            30,
+            138014,
+            "0.8",
+            28,
+            "56.4",
+            "55.1",
+            2334,
+            18,
+            "56.5",
+            47,
+            "0.9",
+            "0.10"
+          ],
+          "column_count": 46,
+          "data_types": {
+            "Min": "object",
+            "2024-07-01 00:00:00": "object",
+            "0": "object",
+            "0.1": "object",
+            "0.2": "object",
+            "0.3": "object",
+            "0.4": "object",
+            "24": "object",
+            "-30300": "object",
+            "55": "object",
+            "0.57": "object",
+            "25": "object",
+            "25.1": "object",
+            "56": "object",
+            "58": "object",
+            "36": "object",
+            "23": "object",
+            "24.1": "object",
+            "49": "object",
+            "51": "object",
+            "1152990": "object",
+            "51.1": "object",
+            "0.5": "object",
+            "79": "object",
+            "15": "object",
+            "56.1": "object",
+            "0.6": "object",
+            "56.2": "object",
+            "58.1": "object",
+            "11": "object",
+            "25.2": "object",
+            "53": "object",
+            "0.7": "object",
+            "56.3": "object",
+            "30": "object",
+            "138014": "object",
+            "0.8": "object",
+            "28": "object",
+            "56.4": "object",
+            "55.1": "object",
+            "2334": "object",
+            "18": "object",
+            "56.5": "object",
+            "47": "object",
+            "0.9": "object",
+            "0.10": "object"
+          },
+          "datetime_columns": [],
+          "time_range": {},
+          "numeric_columns": [],
+          "parameters": [
+            {
+              "name": "Min",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "8323"
+            },
+            {
+              "name": "2024-07-01 00:00:00",
+              "dtype": "object",
+              "unique_values": 8324,
+              "null_count": "0"
+            },
+            {
+              "name": "0",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "8322"
+            },
+            {
+              "name": "0.1",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "8322"
+            },
+            {
+              "name": "0.2",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "8322"
+            },
+            {
+              "name": "0.3",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "8322"
+            },
+            {
+              "name": "0.4",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "8322"
+            },
+            {
+              "name": "24",
+              "dtype": "object",
+              "unique_values": 32,
+              "null_count": "0"
+            },
+            {
+              "name": "-30300",
+              "dtype": "object",
+              "unique_values": 608,
+              "null_count": "0"
+            },
+            {
+              "name": "55",
+              "dtype": "object",
+              "unique_values": 10,
+              "null_count": "0"
+            },
+            {
+              "name": "0.57",
+              "dtype": "object",
+              "unique_values": 7,
+              "null_count": "0"
+            },
+            {
+              "name": "25",
+              "dtype": "object",
+              "unique_values": 3,
+              "null_count": "0"
+            },
+            {
+              "name": "25.1",
+              "dtype": "object",
+              "unique_values": 32,
+              "null_count": "0"
+            },
+            {
+              "name": "56",
+              "dtype": "object",
+              "unique_values": 15,
+              "null_count": "0"
+            },
+            {
+              "name": "58",
+              "dtype": "object",
+              "unique_values": 10,
+              "null_count": "0"
+            },
+            {
+              "name": "36",
+              "dtype": "object",
+              "unique_values": 52,
+              "null_count": "0"
+            },
+            {
+              "name": "23",
+              "dtype": "object",
+              "unique_values": 31,
+              "null_count": "0"
+            },
+            {
+              "name": "24.1",
+              "dtype": "object",
+              "unique_values": 30,
+              "null_count": "0"
+            },
+            {
+              "name": "49",
+              "dtype": "object",
+              "unique_values": 4,
+              "null_count": "0"
+            },
+            {
+              "name": "51",
+              "dtype": "object",
+              "unique_values": 8,
+              "null_count": "0"
+            },
+            {
+              "name": "1152990",
+              "dtype": "object",
+              "unique_values": 620,
+              "null_count": "0"
+            },
+            {
+              "name": "51.1",
+              "dtype": "object",
+              "unique_values": 8,
+              "null_count": "0"
+            },
+            {
+              "name": "0.5",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "0"
+            },
+            {
+              "name": "79",
+              "dtype": "object",
+              "unique_values": 16,
+              "null_count": "0"
+            },
+            {
+              "name": "15",
+              "dtype": "object",
+              "unique_values": 13,
+              "null_count": "0"
+            },
+            {
+              "name": "56.1",
+              "dtype": "object",
+              "unique_values": 14,
+              "null_count": "0"
+            },
+            {
+              "name": "0.6",
+              "dtype": "object",
+              "unique_values": 51,
+              "null_count": "0"
+            },
+            {
+              "name": "56.2",
+              "dtype": "object",
+              "unique_values": 14,
+              "null_count": "0"
+            },
+            {
+              "name": "58.1",
+              "dtype": "object",
+              "unique_values": 9,
+              "null_count": "0"
+            },
+            {
+              "name": "11",
+              "dtype": "object",
+              "unique_values": 31,
+              "null_count": "0"
+            },
+            {
+              "name": "25.2",
+              "dtype": "object",
+              "unique_values": 33,
+              "null_count": "0"
+            },
+            {
+              "name": "53",
+              "dtype": "object",
+              "unique_values": 37,
+              "null_count": "0"
+            },
+            {
+              "name": "0.7",
+              "dtype": "object",
+              "unique_values": 65,
+              "null_count": "0"
+            },
+            {
+              "name": "56.3",
+              "dtype": "object",
+              "unique_values": 13,
+              "null_count": "0"
+            },
+            {
+              "name": "30",
+              "dtype": "object",
+              "unique_values": 35,
+              "null_count": "0"
+            },
+            {
+              "name": "138014",
+              "dtype": "object",
+              "unique_values": 2800,
+              "null_count": "0"
+            },
+            {
+              "name": "0.8",
+              "dtype": "object",
+              "unique_values": 11,
+              "null_count": "0"
+            },
+            {
+              "name": "28",
+              "dtype": "object",
+              "unique_values": 38,
+              "null_count": "0"
+            },
+            {
+              "name": "56.4",
+              "dtype": "object",
+              "unique_values": 14,
+              "null_count": "0"
+            },
+            {
+              "name": "55.1",
+              "dtype": "object",
+              "unique_values": 11,
+              "null_count": "0"
+            },
+            {
+              "name": "2334",
+              "dtype": "object",
+              "unique_values": 51,
+              "null_count": "0"
+            },
+            {
+              "name": "18",
+              "dtype": "object",
+              "unique_values": 46,
+              "null_count": "0"
+            },
+            {
+              "name": "56.5",
+              "dtype": "object",
+              "unique_values": 14,
+              "null_count": "0"
+            },
+            {
+              "name": "47",
+              "dtype": "object",
+              "unique_values": 19,
+              "null_count": "0"
+            },
+            {
+              "name": "0.9",
+              "dtype": "object",
+              "unique_values": 50,
+              "null_count": "0"
+            },
+            {
+              "name": "0.10",
+              "dtype": "object",
+              "unique_values": 173,
+              "null_count": "0"
+            }
+          ]
+        },
+        "2024": {
+          "rows": 89202,
+          "columns": [
+            "Datum + Uhrzeit",
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+            "Vorlauf HK1 Ost (\u00b0C)",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+            "Zirkulation von Wohnungen (\u00b0C)",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+            "Kaltwasser (\u00b0C)",
+            "Status Ventil HK2 West (%)",
+            "Ventil HK1 Ost % (%)",
+            "Status Ventil Fernw\u00e4rme (%)",
+            "Ventil Fernw\u00e4rme % (%)",
+            "Z\u00e4hlerstand Zirkulation (kWh)",
+            "Warmwasser vor Zirkulation (\u00b0C)",
+            "Vorlauf Frischwassermodul (\u00b0C)",
+            "Warmwasser nach Zirkulation (\u00b0C)",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)",
+            "Vorlauf HK2 West (\u00b0C)",
+            "Ventil HK2 West % (%)",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+            "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)",
+            "Leistung in W Z\u00e4hler Zirkulation (W)",
+            "Status Ventil HK1 Ost (%)",
+            "Unnamed: 23",
+            "Status Ventil HK2 West (%)*-50"
+          ],
+          "column_count": 25,
+          "data_types": {
+            "Datum + Uhrzeit": "datetime64[ns]",
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)": "float64",
+            "Vorlauf HK1 Ost (\u00b0C)": "int64",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)": "int64",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)": "int64",
+            "Zirkulation von Wohnungen (\u00b0C)": "int64",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)": "int64",
+            "Kaltwasser (\u00b0C)": "int64",
+            "Status Ventil HK2 West (%)": "int64",
+            "Ventil HK1 Ost % (%)": "float64",
+            "Status Ventil Fernw\u00e4rme (%)": "int64",
+            "Ventil Fernw\u00e4rme % (%)": "float64",
+            "Z\u00e4hlerstand Zirkulation (kWh)": "int64",
+            "Warmwasser vor Zirkulation (\u00b0C)": "int64",
+            "Vorlauf Frischwassermodul (\u00b0C)": "int64",
+            "Warmwasser nach Zirkulation (\u00b0C)": "int64",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)": "int64",
+            "Vorlauf HK2 West (\u00b0C)": "int64",
+            "Ventil HK2 West % (%)": "float64",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)": "int64",
+            "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)": "float64",
+            "Leistung in W Z\u00e4hler Zirkulation (W)": "int64",
+            "Status Ventil HK1 Ost (%)": "int64",
+            "Unnamed: 23": "float64",
+            "Status Ventil HK2 West (%)*-50": "float64"
+          },
+          "datetime_columns": [
+            "Datum + Uhrzeit"
+          ],
+          "time_range": {
+            "Datum + Uhrzeit": {
+              "min": "2024-01-01 00:50:00",
+              "max": "2024-12-31 23:55:00"
+            }
+          },
+          "numeric_columns": [
+            "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+            "Vorlauf HK1 Ost (\u00b0C)",
+            "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+            "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+            "Zirkulation von Wohnungen (\u00b0C)",
+            "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+            "Kaltwasser (\u00b0C)",
+            "Status Ventil HK2 West (%)",
+            "Ventil HK1 Ost % (%)",
+            "Status Ventil Fernw\u00e4rme (%)",
+            "Ventil Fernw\u00e4rme % (%)",
+            "Z\u00e4hlerstand Zirkulation (kWh)",
+            "Warmwasser vor Zirkulation (\u00b0C)",
+            "Vorlauf Frischwassermodul (\u00b0C)",
+            "Warmwasser nach Zirkulation (\u00b0C)",
+            "R\u00fccklauf Frischwassermodul (\u00b0C)",
+            "Vorlauf HK2 West (\u00b0C)",
+            "Ventil HK2 West % (%)",
+            "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+            "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)",
+            "Leistung in W Z\u00e4hler Zirkulation (W)",
+            "Status Ventil HK1 Ost (%)",
+            "Unnamed: 23",
+            "Status Ventil HK2 West (%)*-50"
+          ],
+          "parameters": [
+            {
+              "name": "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+              "dtype": "float64",
+              "unique_values": 692,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 8.0
+            },
+            {
+              "name": "Vorlauf HK1 Ost (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 44,
+              "null_count": "0",
+              "min": 23.0,
+              "max": 66.0
+            },
+            {
+              "name": "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 32,
+              "null_count": "0",
+              "min": 25.0,
+              "max": 56.0
+            },
+            {
+              "name": "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+              "dtype": "int64",
+              "unique_values": 22430,
+              "null_count": "0",
+              "min": 1012510.0,
+              "max": 1278330.0
+            },
+            {
+              "name": "Zirkulation von Wohnungen (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 32,
+              "null_count": "0",
+              "min": 25.0,
+              "max": 56.0
+            },
+            {
+              "name": "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+              "dtype": "int64",
+              "unique_values": 1,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Kaltwasser (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 19,
+              "null_count": "0",
+              "min": 8.0,
+              "max": 26.0
+            },
+            {
+              "name": "Status Ventil HK2 West (%)",
+              "dtype": "int64",
+              "unique_values": 101,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 100.0
+            },
+            {
+              "name": "Ventil HK1 Ost % (%)",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "89202",
+              "min": null,
+              "max": null
+            },
+            {
+              "name": "Status Ventil Fernw\u00e4rme (%)",
+              "dtype": "int64",
+              "unique_values": 19,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 99.0
+            },
+            {
+              "name": "Ventil Fernw\u00e4rme % (%)",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "89202",
+              "min": null,
+              "max": null
+            },
+            {
+              "name": "Z\u00e4hlerstand Zirkulation (kWh)",
+              "dtype": "int64",
+              "unique_values": 31159,
+              "null_count": "0",
+              "min": 120858.0,
+              "max": 155929.0
+            },
+            {
+              "name": "Warmwasser vor Zirkulation (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 47,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 64.0
+            },
+            {
+              "name": "Vorlauf Frischwassermodul (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 44,
+              "null_count": "0",
+              "min": 25.0,
+              "max": 68.0
+            },
+            {
+              "name": "Warmwasser nach Zirkulation (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 39,
+              "null_count": "0",
+              "min": 25.0,
+              "max": 63.0
+            },
+            {
+              "name": "R\u00fccklauf Frischwassermodul (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 53,
+              "null_count": "0",
+              "min": 12.0,
+              "max": 64.0
+            },
+            {
+              "name": "Vorlauf HK2 West (\u00b0C)",
+              "dtype": "int64",
+              "unique_values": 44,
+              "null_count": "0",
+              "min": 23.0,
+              "max": 69.0
+            },
+            {
+              "name": "Ventil HK2 West % (%)",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "89202",
+              "min": null,
+              "max": null
+            },
+            {
+              "name": "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+              "dtype": "int64",
+              "unique_values": 2042,
+              "null_count": "0",
+              "min": -76800.0,
+              "max": 252000.0
+            },
+            {
+              "name": "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)",
+              "dtype": "float64",
+              "unique_values": 21,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 1.0
+            },
+            {
+              "name": "Leistung in W Z\u00e4hler Zirkulation (W)",
+              "dtype": "int64",
+              "unique_values": 134,
+              "null_count": "0",
+              "min": -1200.0,
+              "max": 20500.0
+            },
+            {
+              "name": "Status Ventil HK1 Ost (%)",
+              "dtype": "int64",
+              "unique_values": 101,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 100.0
+            },
+            {
+              "name": "Unnamed: 23",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "89202",
+              "min": null,
+              "max": null
+            },
+            {
+              "name": "Status Ventil HK2 West (%)*-50",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "89201",
+              "min": -2250.0,
+              "max": -2250.0
+            }
+          ]
+        },
+        "HEB": {
+          "rows": 3,
+          "columns": [
+            "Unnamed: 0",
+            "Z\u00e4hlerstand Fernw\u00e4rme\n[kwh]",
+            "Z\u00e4hlerstand Zirkulation [kwh]",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [] m\u00b3",
+            "Durchfluss Wasserz\u00e4hler TWE [m\u00b3/h]",
+            "Unnamed: 5",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/d]",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/m\u00b2]"
+          ],
+          "column_count": 8,
+          "data_types": {
+            "Unnamed: 0": "object",
+            "Z\u00e4hlerstand Fernw\u00e4rme\n[kwh]": "float64",
+            "Z\u00e4hlerstand Zirkulation [kwh]": "int64",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [] m\u00b3": "float64",
+            "Durchfluss Wasserz\u00e4hler TWE [m\u00b3/h]": "int64",
+            "Unnamed: 5": "float64",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/d]": "float64",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/m\u00b2]": "float64"
+          },
+          "datetime_columns": [],
+          "time_range": {},
+          "numeric_columns": [
+            "Z\u00e4hlerstand Fernw\u00e4rme\n[kwh]",
+            "Z\u00e4hlerstand Zirkulation [kwh]",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [] m\u00b3",
+            "Durchfluss Wasserz\u00e4hler TWE [m\u00b3/h]",
+            "Unnamed: 5",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/d]",
+            "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/m\u00b2]"
+          ],
+          "parameters": [
+            {
+              "name": "Unnamed: 0",
+              "dtype": "object",
+              "unique_values": 3,
+              "null_count": "0"
+            },
+            {
+              "name": "Z\u00e4hlerstand Fernw\u00e4rme\n[kwh]",
+              "dtype": "float64",
+              "unique_values": 3,
+              "null_count": "0",
+              "min": 135591.0,
+              "max": 1287069.0
+            },
+            {
+              "name": "Z\u00e4hlerstand Zirkulation [kwh]",
+              "dtype": "int64",
+              "unique_values": 3,
+              "null_count": "0",
+              "min": 12809.0,
+              "max": 156653.0
+            },
+            {
+              "name": "Z\u00e4hlerstand Wasserz\u00e4hler TWE [] m\u00b3",
+              "dtype": "float64",
+              "unique_values": 3,
+              "null_count": "0",
+              "min": 277.0,
+              "max": 2630.0
+            },
+            {
+              "name": "Durchfluss Wasserz\u00e4hler TWE [m\u00b3/h]",
+              "dtype": "int64",
+              "unique_values": 1,
+              "null_count": "0",
+              "min": 0.0,
+              "max": 0.0
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "float64",
+              "unique_values": 0,
+              "null_count": "3",
+              "min": null,
+              "max": null
+            },
+            {
+              "name": "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/d]",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "2",
+              "min": 16.116438356164384,
+              "max": 16.116438356164384
+            },
+            {
+              "name": "Z\u00e4hlerstand Wasserz\u00e4hler TWE [l/m\u00b2]",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "2",
+              "min": 0.6198630136986302,
+              "max": 0.6198630136986302
+            }
+          ]
+        },
+        "Grundriss_EA": {
+          "rows": 12,
+          "columns": [
+            "Unnamed: 0",
+            "1.OG",
+            "2.OG",
+            "3.OG",
+            "4.OG",
+            "Wohnnutzfl/whg",
+            "4.OG.1",
+            "Wohnnutzfl/whg.1",
+            "Wohnnutzfl Ges",
+            "Wohnnutzfl / whg Druchschnitt",
+            "ca. Pers / Whg",
+            "Pers Ges."
+          ],
+          "column_count": 12,
+          "data_types": {
+            "Unnamed: 0": "object",
+            "1.OG": "float64",
+            "2.OG": "float64",
+            "3.OG": "float64",
+            "4.OG": "float64",
+            "Wohnnutzfl/whg": "float64",
+            "4.OG.1": "float64",
+            "Wohnnutzfl/whg.1": "float64",
+            "Wohnnutzfl Ges": "float64",
+            "Wohnnutzfl / whg Druchschnitt": "float64",
+            "ca. Pers / Whg": "object",
+            "Pers Ges.": "float64"
+          },
+          "datetime_columns": [],
+          "time_range": {},
+          "numeric_columns": [
+            "1.OG",
+            "2.OG",
+            "3.OG",
+            "4.OG",
+            "Wohnnutzfl/whg",
+            "4.OG.1",
+            "Wohnnutzfl/whg.1",
+            "Wohnnutzfl Ges",
+            "Wohnnutzfl / whg Druchschnitt",
+            "Pers Ges."
+          ],
+          "parameters": [
+            {
+              "name": "Unnamed: 0",
+              "dtype": "object",
+              "unique_values": 2,
+              "null_count": "10"
+            },
+            {
+              "name": "1.OG",
+              "dtype": "float64",
+              "unique_values": 11,
+              "null_count": "1",
+              "min": 10.0,
+              "max": 36.0
+            },
+            {
+              "name": "2.OG",
+              "dtype": "float64",
+              "unique_values": 10,
+              "null_count": "2",
+              "min": 20.0,
+              "max": 29.0
+            },
+            {
+              "name": "3.OG",
+              "dtype": "float64",
+              "unique_values": 10,
+              "null_count": "2",
+              "min": 30.0,
+              "max": 39.0
+            },
+            {
+              "name": "4.OG",
+              "dtype": "float64",
+              "unique_values": 6,
+              "null_count": "6",
+              "min": 40.0,
+              "max": 45.0
+            },
+            {
+              "name": "Wohnnutzfl/whg",
+              "dtype": "float64",
+              "unique_values": 5,
+              "null_count": "2",
+              "min": 38.05,
+              "max": 114.28
+            },
+            {
+              "name": "4.OG.1",
+              "dtype": "float64",
+              "unique_values": 4,
+              "null_count": "8",
+              "min": 46.0,
+              "max": 49.0
+            },
+            {
+              "name": "Wohnnutzfl/whg.1",
+              "dtype": "float64",
+              "unique_values": 4,
+              "null_count": "8",
+              "min": 36.06,
+              "max": 66.37
+            },
+            {
+              "name": "Wohnnutzfl Ges",
+              "dtype": "float64",
+              "unique_values": 8,
+              "null_count": "1",
+              "min": 152.2,
+              "max": 2642.5899999999992
+            },
+            {
+              "name": "Wohnnutzfl / whg Druchschnitt",
+              "dtype": "float64",
+              "unique_values": 1,
+              "null_count": "11",
+              "min": 73.40527777777775,
+              "max": 73.40527777777775
+            },
+            {
+              "name": "ca. Pers / Whg",
+              "dtype": "object",
+              "unique_values": 6,
+              "null_count": "1"
+            },
+            {
+              "name": "Pers Ges.",
+              "dtype": "float64",
+              "unique_values": 6,
+              "null_count": "1",
+              "min": 4.0,
+              "max": 116.0
+            }
+          ]
+        }
+      },
+      "sheet_count": 5
+    }
+  ],
+  "comparisons": {
+    "parameter_overlaps": [
+      {
+        "file1": "Monitoring_ERS.xlsx - Daten",
+        "file2": "Monitoring_ERS.xlsx - Analyse",
+        "common_params": [
+          "Unnamed: 0",
+          "Ventil HK1 Ost % (%)",
+          "Drehzahl Pumpe Zirkulation sekund\u00e4r (%)",
+          "Ventil Fernw\u00e4rme % (%)"
+        ],
+        "overlap_percentage": 100.0
+      },
+      {
+        "file1": "Monitoring_ERS.xlsx - Daten",
+        "file2": "Monitoring_ERS_2024_V2_250506.xlsx - All 01.12.23 - 31.03.25",
+        "common_params": [
+          "Vorlauf HK2 West (\u00b0C)",
+          "Vorlauf HK1 Ost (\u00b0C)",
+          "R\u00fccklauf HK2 West (\u00b0C)",
+          "Zirkulation zu Wohnungen (\u00b0C)",
+          "Puffer 2.06 (\u00b0C)",
+          "Aussenf\u00fchler (\u00b0C)",
+          "R\u00fccklauf EV prim\u00e4r (\u00b0C)",
+          "R\u00fccklauf Frischwassermodul (\u00b0C)",
+          "Puffer 2.04 (\u00b0C)",
+          "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+          "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+          "R\u00fccklauf HK1 Ost (\u00b0C)",
+          "Puffer 2.05 (\u00b0C)",
+          "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+          "Puffer 2.03 (\u00b0C)",
+          "Puffer 2.01 (\u00b0C)",
+          "Vorlauf EV prim\u00e4r (\u00b0C)",
+          "Warmwasser vor Zirkulation (\u00b0C)",
+          "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+          "Zirkulation von Wohnungen (\u00b0C)",
+          "Puffer 2.08 (\u00b0C)",
+          "Kaltwasser (\u00b0C)",
+          "Puffer 2.07 (\u00b0C)",
+          "Vorlauf Zirkulation prim\u00e4r (\u00b0C)",
+          "Z\u00e4hlerstand Zirkulation (kWh)",
+          "Puffer 2.02 (\u00b0C)",
+          "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+          "Warmwasser nach Zirkulation (\u00b0C)",
+          "Vorlauf Frischwassermodul (\u00b0C)"
+        ],
+        "overlap_percentage": 64.44444444444444
+      },
+      {
+        "file1": "Monitoring_ERS.xlsx - Daten",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - 2024",
+        "common_params": [
+          "Leistung in W Z\u00e4hler Zirkulation (W)",
+          "Status Ventil HK2 West (%)",
+          "Vorlauf HK2 West (\u00b0C)",
+          "Vorlauf HK1 Ost (\u00b0C)",
+          "Ventil HK2 West % (%)",
+          "R\u00fccklauf Frischwassermodul (\u00b0C)",
+          "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+          "Ventil Fernw\u00e4rme % (%)",
+          "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+          "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+          "Status Ventil Fernw\u00e4rme (%)",
+          "Ventil HK1 Ost % (%)",
+          "Warmwasser vor Zirkulation (\u00b0C)",
+          "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+          "Zirkulation von Wohnungen (\u00b0C)",
+          "Kaltwasser (\u00b0C)",
+          "Status Ventil HK1 Ost (%)",
+          "Durchfluss m\u00b3 Z\u00e4hler Zirkulation (m\u00b3/h)",
+          "Z\u00e4hlerstand Zirkulation (kWh)",
+          "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+          "Warmwasser nach Zirkulation (\u00b0C)",
+          "Vorlauf Frischwassermodul (\u00b0C)"
+        ],
+        "overlap_percentage": 91.66666666666667
+      },
+      {
+        "file1": "Monitoring_ERS.xlsx - Daten",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - HEB",
+        "common_params": [
+          "Unnamed: 0"
+        ],
+        "overlap_percentage": 12.5
+      },
+      {
+        "file1": "Monitoring_ERS.xlsx - Daten",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - Grundriss_EA",
+        "common_params": [
+          "Unnamed: 0"
+        ],
+        "overlap_percentage": 8.333333333333334
+      },
+      {
+        "file1": "Monitoring_ERS.xlsx - Analyse",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - 2024",
+        "common_params": [
+          "Ventil Fernw\u00e4rme % (%)",
+          "Ventil HK1 Ost % (%)"
+        ],
+        "overlap_percentage": 50.0
+      },
+      {
+        "file1": "Monitoring_ERS.xlsx - Analyse",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - HEB",
+        "common_params": [
+          "Unnamed: 0"
+        ],
+        "overlap_percentage": 25.0
+      },
+      {
+        "file1": "Monitoring_ERS.xlsx - Analyse",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - Grundriss_EA",
+        "common_params": [
+          "Unnamed: 0"
+        ],
+        "overlap_percentage": 25.0
+      },
+      {
+        "file1": "Monitoring_ERS_2024_V2_250506.xlsx - Auswahl",
+        "file2": "Monitoring_ERS_2024_V2_250506.xlsx - All 01.12.23 - 31.03.25",
+        "common_params": [
+          "Z\u00e4hlerstand Wasserz\u00e4hler TWE (m\u00b3 )"
+        ],
+        "overlap_percentage": 6.666666666666667
+      },
+      {
+        "file1": "Monitoring_ERS_2024_V2_250506.xlsx - Auswahl",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - HEB",
+        "common_params": [
+          "Unnamed: 5"
+        ],
+        "overlap_percentage": 12.5
+      },
+      {
+        "file1": "Monitoring_ERS_2024_V2_250506.xlsx - All 01.12.23 - 31.03.25",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - 2024",
+        "common_params": [
+          "R\u00fccklauf Frischwassermodul (\u00b0C)",
+          "Kaltwasser (\u00b0C)",
+          "Z\u00e4hlerstand Z\u00e4hler Fernw\u00e4rme (kWh)",
+          "Vorlauf HK2 West (\u00b0C)",
+          "Vorlauf HK1 Ost (\u00b0C)",
+          "Warmwasser vor Zirkulation (\u00b0C)",
+          "Z\u00e4hlerstand Zirkulation (kWh)",
+          "R\u00fccklauf Zirkulation prim\u00e4r (\u00b0C)",
+          "Leistung Z\u00e4hler Fernw\u00e4rme (W)",
+          "Zirkulation von Wohnungen (\u00b0C)",
+          "Durchfluss Z\u00e4hler Fernw\u00e4rme (m\u00b3/h)",
+          "Warmwasser nach Zirkulation (\u00b0C)",
+          "Durchfluss Wasserz\u00e4hler TWE (m\u00b3/h)",
+          "Vorlauf Frischwassermodul (\u00b0C)"
+        ],
+        "overlap_percentage": 58.333333333333336
+      },
+      {
+        "file1": "Monitoring_ERS_24-07_all.xlsx - HEB",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - Grundriss_EA",
+        "common_params": [
+          "Unnamed: 0"
+        ],
+        "overlap_percentage": 12.5
+      }
+    ],
+    "time_overlaps": [
+      {
+        "file1": "Monitoring_ERS.xlsx - Daten",
+        "file2": "Monitoring_ERS_24-07_all.xlsx - 2024",
+        "overlap_start": "2024-01-01 00:50:00",
+        "overlap_end": "2024-07-31 23:55:00"
+      }
+    ],
+    "potential_subsets": [
+      {
+        "subset": "Monitoring_ERS.xlsx - Analyse",
+        "superset": "Monitoring_ERS.xlsx - Daten"
+      }
+    ],
+    "similar_structures": [
+      {
+        "file1": "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv",
+        "file2": "Vp.csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv",
+        "file2": "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv",
+        "file2": "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv",
+        "file2": "Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv",
+        "file2": "export_2011_2024-01-01-00-00_2024-12-31-23-59.csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "Vp.csv",
+        "file2": "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "Vp.csv",
+        "file2": "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "Vp.csv",
+        "file2": "Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "Vp.csv",
+        "file2": "export_2011_2024-01-01-00-00_2024-12-31-23-59.csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+        "file2": "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+        "file2": "Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+        "file2": "export_2011_2024-01-01-00-00_2024-12-31-23-59.csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+        "file2": "Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+        "file2": "export_2011_2024-01-01-00-00_2024-12-31-23-59.csv",
+        "relationship": "identical"
+      },
+      {
+        "file1": "Relevant_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (2).csv",
+        "file2": "export_2011_2024-01-01-00-00_2024-12-31-23-59.csv",
+        "relationship": "identical"
+      }
+    ]
+  }
+}

@@ -79,3 +79,5 @@ data_structure.json
 # Requirements and readme (we'll add our own)
 requirements.txt
 !README.md
+docs/.claude-flow/metrics/agent-metrics.json
+.gitignore
