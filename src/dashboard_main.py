@@ -4,6 +4,14 @@ MokiG Dashboard - Energiemonitoring
 Optimierte Version mit vollständiger Fehlerbehandlung
 """
 
+import sys
+from pathlib import Path
+
+# Stelle sicher, dass src im Path ist
+src_path = Path(__file__).parent
+if str(src_path) not in sys.path:
+    sys.path.insert(0, str(src_path))
+
 import dash
 from dash import dcc, html, Input, Output, State, callback_context
 import dash_bootstrap_components as dbc
@@ -12,7 +20,7 @@ import pandas as pd
 import traceback
 
 # Importiere eigene Module
-from data_loader_improved import DataLoader
+from data_loader_quiet import DataLoader
 from ui_components_improved import (
     create_navbar, 
     create_metric_card,
@@ -38,14 +46,26 @@ app.title = "MokiG Dashboard - Energiemonitoring"
 # DATEN LADEN
 # ============================================================================
 
-BASE_PATH = Path(__file__).parent.parent
-data_loader = DataLoader(BASE_PATH)
+import os
 
-print("\n" + "="*60)
-print("🚀 MokiG Dashboard wird gestartet...")
-print("="*60)
-print("📊 Lade Datenquellen...")
-ALL_DATA = data_loader.load_all_data()
+# Nur einmal laden, nicht bei jedem Import
+if not hasattr(sys.modules[__name__], '_data_loaded'):
+    BASE_PATH = Path(__file__).parent.parent
+    data_loader = DataLoader(BASE_PATH)
+    
+    # Nur ausgeben wenn nicht im Reload-Modus
+    if os.environ.get('WERKZEUG_RUN_MAIN') != 'true':
+        print("\n" + "="*60)
+        print("MokiG Dashboard wird gestartet...")
+        print("="*60)
+        print("Lade Datenquellen...")
+    
+    ALL_DATA = data_loader.load_all_data()
+    sys.modules[__name__]._data_loaded = True
+else:
+    # Daten bereits geladen, verwende Cache
+    if os.environ.get('WERKZEUG_RUN_MAIN') != 'true':
+        print("Verwende gecachte Daten...")
 
 # ============================================================================
 # LAYOUT
@@ -93,7 +113,7 @@ def create_overview_cards():
             ], width=6, md=3)
         ], className="mb-4")
     except Exception as e:
-        print(f"❌ FEHLER in create_overview_cards: {e}")
+        print(f"[FEHLER] in create_overview_cards: {e}")
         return html.Div(f"Fehler beim Erstellen der Übersichtskarten: {e}")
 
 app.layout = html.Div([
@@ -300,8 +320,16 @@ def update_main_tab(active_tab):
                 
                 html.Hr(),
                 
-                # Container für Dataset-Content
-                html.Div(id="dataset-content", className="mt-3")
+                # Container für Dataset-Content mit Loading Indicator
+                dcc.Loading(
+                    id="loading-dataset",
+                    type="circle",
+                    children=[
+                        html.Div(id="dataset-content", className="mt-3")
+                    ],
+                    color="#2E86AB",
+                    className="loading-wrapper"
+                )
             ])
         ], className="shadow-sm")
         
@@ -328,9 +356,10 @@ def update_main_tab(active_tab):
 # Registriere weitere Callbacks
 try:
     register_callbacks(app, ALL_DATA)
-    print("✅ Callbacks erfolgreich registriert")
+    if os.environ.get('WERKZEUG_RUN_MAIN') != 'true':
+        print("[OK] Callbacks erfolgreich registriert")
 except Exception as e:
-    print(f"❌ FEHLER beim Registrieren der Callbacks: {e}")
+    print(f"[FEHLER] beim Registrieren der Callbacks: {e}")
     traceback.print_exc()
 
 # ============================================================================
@@ -340,8 +369,14 @@ except Exception as e:
 server = app.server
 
 if __name__ == '__main__':
-    print("\n" + "="*60)
-    print("✅ Dashboard bereit auf http://127.0.0.1:8050")
-    print("   Drücke Ctrl+C zum Beenden")
-    print("="*60 + "\n")
-    app.run(debug=True, host='127.0.0.1', port=8050)
+    # Verhindere doppeltes Laden durch Werkzeug Reloader
+    import os
+    if os.environ.get('WERKZEUG_RUN_MAIN') != 'true':
+        # Nur beim ersten Start ausgeben, nicht beim Reload
+        print("\n" + "="*60)
+        print("[OK] Dashboard bereit auf http://127.0.0.1:8050")
+        print("     Druecke Ctrl+C zum Beenden")
+        print("="*60 + "\n")
+    
+    # Debug-Modus deaktiviert um doppeltes Laden zu verhindern
+    app.run(debug=False, host='127.0.0.1', port=8050)

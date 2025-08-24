@@ -11,6 +11,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import numpy as np
+from column_toggle_component import create_enhanced_data_table, create_column_toggle_panel
 
 
 # Farbschema
@@ -62,7 +63,7 @@ def create_metric_card(title, value, subtitle="", color="primary", icon=None):
     ], className="h-100 shadow-sm")
 
 
-def create_data_table_with_full_columns(df, table_id, max_rows=None):
+def create_data_table_with_full_columns(df, table_id, max_rows=None, visible_columns=None):
     """
     Erstellt eine verbesserte Datentabelle mit:
     - Vollständigen Spaltennamen (nicht abgeschnitten)
@@ -74,31 +75,22 @@ def create_data_table_with_full_columns(df, table_id, max_rows=None):
     if df.empty:
         return html.Div("Keine Daten verfügbar", className="text-muted text-center p-4")
     
-    # Dynamische max_rows basierend auf Dataset-Größe
+    # IMMER alle Daten anzeigen - keine Limitierung mehr
     if max_rows is None:
-        # Für große Datasets (>50k Zeilen), zeige alle Daten mit virtualization
-        # Für kleinere Datasets, zeige alle Daten
-        if len(df) > 100000:
-            max_rows = 100000  # Limit für sehr große Datasets
-        else:
-            max_rows = len(df)  # Zeige alle Daten für normale Datasets
+        max_rows = len(df)  # Zeige IMMER alle Daten, unabhängig von der Größe
     
-    # Bei großen Datasets, zeige die neuesten Daten zuerst wenn Date-Spalte vorhanden
-    if len(df) > 20000 and 'Date' in df.columns:
+    # Verwende immer den gesamten DataFrame, keine Limitierung
+    display_df = df.copy()
+    
+    # Sortiere nach Datum wenn vorhanden
+    if 'Date' in df.columns:
         try:
-            # Sortiere nach Datum absteigend (neueste zuerst)
-            df = df.sort_values('Date', ascending=False)
-            display_df = df.head(max_rows).copy()
-            # Sortiere wieder aufsteigend für Anzeige
             display_df = display_df.sort_values('Date', ascending=True)
         except:
-            display_df = df.head(max_rows).copy()
-    else:
-        # Limitiere für Performance
-        display_df = df.head(max_rows).copy()
+            pass
     
-    # Füge Info-Zeile hinzu wenn Daten limitiert wurden
-    is_limited = len(df) > max_rows
+    # Keine Limitierung mehr - zeige immer alle Daten
+    is_limited = False
     
     # Formatiere Datumsspalte wenn vorhanden
     if 'Date' in display_df.columns:
@@ -116,14 +108,17 @@ def create_data_table_with_full_columns(df, table_id, max_rows=None):
     
     # Erstelle Spalten-Definitionen mit vollem Namen
     columns = []
+    cols_to_show = visible_columns if visible_columns else display_df.columns
     for col in display_df.columns:
+        if col not in cols_to_show:
+            continue
         col_def = {
             "name": str(col),  # Voller Name ohne Kürzung
             "id": str(col),
             "deletable": False,
             "selectable": True,
-            "hideable": True,
-            "resizable": True,  # Spalten können in der Breite angepasst werden
+            "hideable": False  # Hideable wird nun über das Toggle-Panel gesteuert
+            # resizable entfernt - nicht unterstützt in Dash DataTable
         }
         
         # Typ-spezifische Formatierung
@@ -133,16 +128,16 @@ def create_data_table_with_full_columns(df, table_id, max_rows=None):
         
         columns.append(col_def)
     
-    # Erstelle Info-Alert wenn Daten limitiert wurden
+    # Info-Alert für vollständige Datenanzeige
     info_alert = None
-    if is_limited:
+    if len(df) > 50000:
         info_alert = dbc.Alert(
             [
-                html.I(className="fas fa-info-circle me-2"),
-                f"Anzeige limitiert auf {max_rows:,} von {len(df):,} Zeilen für bessere Performance. ",
-                "Die Daten sind vollständig geladen und in Visualisierungen verfügbar."
+                html.I(className="fas fa-check-circle me-2"),
+                f"Vollständiger Datensatz mit {len(df):,} Zeilen wird angezeigt. ",
+                "Nutzen Sie die Sortier- und Filterfunktionen für eine bessere Übersicht."
             ],
-            color="info",
+            color="success",
             className="mb-2"
         )
     
@@ -227,9 +222,7 @@ def create_data_table_with_full_columns(df, table_id, max_rows=None):
         
         tooltip_duration=None,
         
-        # Export-Buttons
-        export_format='xlsx',
-        export_headers='display'
+        # Export entfernt - nicht mehr benötigt
     )
     
     # Wenn Info-Alert vorhanden, kombiniere mit Tabelle

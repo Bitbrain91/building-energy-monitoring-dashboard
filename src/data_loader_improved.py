@@ -256,14 +256,37 @@ class DataLoader:
     def load_excel_flexible(self, filepath, name):
         """Flexibler Excel-Loader mit verbesserter Fehlerbehandlung"""
         try:
-            # Versuche verschiedene Engines
-            try:
-                df = pd.read_excel(filepath, engine='openpyxl')
-            except:
+            # Bestimme die richtige Engine basierend auf Dateiendung
+            file_ext = str(filepath).lower()
+            
+            # Versuche verschiedene Engines je nach Dateiformat
+            if file_ext.endswith('.xlsx'):
+                # Moderne Excel-Dateien (.xlsx) - verwende openpyxl
                 try:
-                    df = pd.read_excel(filepath)
-                except:
+                    df = pd.read_excel(filepath, engine='openpyxl')
+                except Exception as e:
+                    print(f"  ⚠ openpyxl fehlgeschlagen für {name}, versuche alternatives Laden...")
+                    df = pd.read_excel(filepath, engine=None)
+            elif file_ext.endswith('.xls'):
+                # Alte Excel-Dateien (.xls) - benötigt xlrd
+                try:
+                    import xlrd
                     df = pd.read_excel(filepath, engine='xlrd')
+                except ImportError:
+                    print(f"  ⚠ xlrd nicht installiert für {name} (.xls Datei)")
+                    print("    Installiere xlrd mit: pip install xlrd")
+                    print("    Überspringe diese Datei...")
+                    return pd.DataFrame()
+                except Exception as e:
+                    print(f"  ⚠ Fehler beim Laden von {name}: {e}")
+                    return pd.DataFrame()
+            else:
+                # Standardmäßig XLSX annehmen
+                try:
+                    df = pd.read_excel(filepath, engine='openpyxl')
+                except:
+                    print(f"  ⚠ Konnte {name} nicht laden")
+                    return pd.DataFrame()
             
             # Spaltennamen normalisieren
             column_mapping = {
@@ -327,7 +350,7 @@ class DataLoader:
             return pd.DataFrame()
     
     @lru_cache(maxsize=1)
-    def load_all_data(self):
+    def load_all_data(self, quiet=False):
         """Lädt ALLE Daten aus allen Quellen"""
         data = {
             'twin2sim': {},
@@ -336,9 +359,14 @@ class DataLoader:
             'kw': {}
         }
         
-        print("\n" + "="*60)
-        print("Lade alle Datenquellen...")
-        print("="*60)
+        # Nur ausgeben wenn DASHBOARD_VERBOSE gesetzt ist
+        import os
+        verbose = os.environ.get('DASHBOARD_VERBOSE', 'false').lower() == 'true'
+        
+        if verbose:
+            print("\n" + "="*60)
+            print("Lade alle Datenquellen...")
+            print("="*60)
         
         # Twin2Sim
         print("\n📊 Twin2Sim Daten:")
