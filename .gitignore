@@ -84,3 +84,5 @@ Literatur*/
 !README.md
 docs/.claude-flow/metrics/agent-metrics.json
 .gitignore
+src/.claude-flow/metrics/performance.json
+src/.claude-flow/metrics/task-metrics.json
