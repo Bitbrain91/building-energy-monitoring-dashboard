@@ -15,8 +15,8 @@
 # Exclude sensitive data in Daten folder
 Daten/vertraulich*/
 
-# Python
-__pycache__/
+# Python cache and compiled files
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -31,7 +31,8 @@ env/
 *.swp
 *.swo
 *~
-.swarm/
+**/.swarm/
+**/.claude-flow/
 
 # OS
 .DS_Store
@@ -68,16 +69,18 @@ General/
 # Literature folder
 Literatur*/
 
-# Claude configuration files
-CLAUDE.md
-claude-flow*
-*.config.json
+# Claude configuration files (root only)
+/CLAUDE.md
+/claude-flow
+/claude-flow.bat
+/claude-flow.ps1
+/claude-flow.config.json
 
-# Data structure files
-data_structure.json
+# Data structure files (root only)
+/data_structure.json
 
-# Requirements and readme (we'll add our own)
-requirements.txt
+# Requirements (root only)
+/requirements.txt
 !README.md
 docs/.claude-flow/metrics/agent-metrics.json
 .gitignore
