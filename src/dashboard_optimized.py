@@ -6,6 +6,13 @@ ORIGINALE VERSION mit optimiertem Datenlade-Verhalten
 
 import sys
 from pathlib import Path
+import os
+
+# Set UTF-8 encoding for Windows console
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
 
 # Stelle sicher, dass src im Path ist
 src_path = Path(__file__).parent

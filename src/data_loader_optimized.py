@@ -397,6 +397,12 @@ class OptimizedDataLoader:
         """Legacy KW Loader - Lädt ALLE Jahre 2020-2024"""
         dfs = []
         
+        # Prüfe ob es ein Übergabe-Dataset ist
+        if 'uebergabe_bezug' in dataset_name.lower():
+            return self._load_uebergabe_legacy('ÜBERGABE_BEZUG')
+        elif 'uebergabe_lieferung' in dataset_name.lower():
+            return self._load_uebergabe_legacy('ÜBERGABE_LIEFERUNG')
+        
         # Bestimme welches Kraftwerk
         if 'duernbach' in dataset_name.lower():
             base_name = "KW DÜRNBACH_ERZEUGUNG"
@@ -433,5 +439,59 @@ class OptimizedDataLoader:
             
             print(f"   → Gesamt: {len(combined_df):,} Zeilen (2020-2024)")
             return combined_df
+        
+        return None
+    
+    def _load_uebergabe_legacy(self, base_name):
+        """Legacy Loader für Übergabe-Datensätze - Lädt alle Monatsdateien 2020-2024"""
+        dfs = []
+        
+        # Korrekter Pfad für Übergabe-Dateien
+        uebergabe_base_path = self.base_path / "Daten" / "vertraulich_erzeugungsdaten-kw-neukirchen_2025-07-21_0937"
+        
+        print(f"   Lade {base_name} Datensätze (2020-2024)...")
+        
+        # Lade alle Jahre und Monate
+        for year in range(2020, 2025):  # 2020 bis 2024
+            year_path = uebergabe_base_path / str(year)
+            
+            if not year_path.exists():
+                print(f"   [WARNUNG] Verzeichnis nicht gefunden: {year_path}")
+                continue
+                
+            for month in range(1, 13):  # Januar bis Dezember
+                month_str = f"{month:02d}"  # Format: 01, 02, ..., 12
+                file_name = f"{base_name}_{year}.{month_str}.XLSX"
+                file_path = year_path / file_name
+                
+                if file_path.exists():
+                    try:
+                        df = pd.read_excel(file_path, engine='openpyxl')
+                        # Füge Jahr und Monat für Nachverfolgbarkeit hinzu
+                        df['Jahr'] = year
+                        df['Monat'] = month
+                        dfs.append(df)
+                    except Exception as e:
+                        print(f"   [FEHLER] bei {file_path.name}: {e}")
+                        
+        if dfs:
+            # Kombiniere alle Monatsdaten
+            combined_df = pd.concat(dfs, ignore_index=True)
+            
+            # Stelle sicher, dass Date-Spalte existiert
+            if 'ZEIT_VON_UTC' in combined_df.columns:
+                combined_df['Date'] = pd.to_datetime(combined_df['ZEIT_VON_UTC'])
+            elif 'UHRZEIT_LOKAL_BIS' in combined_df.columns:
+                combined_df['Date'] = pd.to_datetime(combined_df['UHRZEIT_LOKAL_BIS'])
+            elif 'Date' not in combined_df.columns:
+                # Fallback: erstelle Date aus Jahr/Monat
+                combined_df['Date'] = pd.to_datetime(
+                    combined_df[['Jahr', 'Monat']].assign(Tag=1)
+                )
+            
+            print(f"   [OK] {base_name}: {len(combined_df):,} Zeilen geladen (2020-2024)")
+            return combined_df
+        else:
+            print(f"   [FEHLER] Keine Daten für {base_name} gefunden")
         
         return None
