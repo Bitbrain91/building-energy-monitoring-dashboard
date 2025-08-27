@@ -134,7 +134,7 @@ def load_uebergabe_from_xlsx(base_path, base_name):
     dfs = []
     
     # Korrekter Pfad für Übergabe-Dateien
-    uebergabe_base_path = base_path / "Daten" / "vertraulich_erzeugungsdaten-kw-neukirchen_2025-07-21_0937"
+    uebergabe_base_path = base_path / "src" / "data" / "kw_neukirchen"
     
     # Lade alle Jahre und Monate
     for year in range(2020, 2025):  # 2020 bis 2024
@@ -184,7 +184,7 @@ def load_kraftwerk_from_xlsx(base_path, base_name):
     dfs = []
     
     # Pfad zu den KW XLSX Dateien
-    kw_base_path = base_path / "Daten" / "vertraulich_erzeugungsdaten-kw-neukirchen_2025-07-21_0937"
+    kw_base_path = base_path / "src" / "data" / "kw_neukirchen"
     
     # Lade alle Jahre (2020-2024)
     for year in range(2020, 2025):  # 2020 bis 2024

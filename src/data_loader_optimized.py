@@ -25,11 +25,11 @@ class OptimizedDataLoader:
         self.parquet_dir = self.base_path / "data_optimized"
         self.cache_dir = self.base_path / "cache"
         
-        # Legacy Pfade für Fallback
-        self.twin2sim_path = self.base_path / "Daten" / "Beispieldaten"
-        self.erentrudis_path = self.base_path / "Daten" / "Monitoringdaten" / "Erentrudisstr"
-        self.fis_path = self.base_path / "Daten" / "Monitoringdaten" / "FIS_Inhauser"
-        self.kw_path = self.base_path / "Daten" / "vertraulich_erzeugungsdaten-kw-neukirchen_2025-07-21_0937"
+        # Neue Datenpfade in src/data
+        self.twin2sim_path = self.base_path / "src" / "data" / "twin2sim"
+        self.erentrudis_path = self.base_path / "src" / "data" / "erentrudisstr"
+        self.fis_path = self.base_path / "src" / "data" / "fis_inhauser"
+        self.kw_path = self.base_path / "src" / "data" / "kw_neukirchen"
         
         # In-Memory Cache mit LRU (Least Recently Used)
         self.memory_cache = {}
@@ -369,12 +369,9 @@ class OptimizedDataLoader:
     def _load_erentrudis_legacy(self, dataset_name):
         """Legacy Erentrudis Loader"""
         file_map = {
-            'gesamtdaten_2024': self.erentrudis_path / "Monitoring" / "2024" / 
-                               "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
-            'detail_juli_2024': self.erentrudis_path / "Monitoring" / "2024" / 
-                               "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
-            'langzeit_2023_2025': self.erentrudis_path / "Monitoring" / 
-                                 "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv"
+            'gesamtdaten_2024': self.erentrudis_path / "Relevant-1_2024_export_2011_2024-01-01-00-00_2024-12-31-23-59 (3).csv",
+            'detail_juli_2024': self.erentrudis_path / "All_24-07_export_2011_2024-07-01-00-00_2024-07-31-23-59.csv",
+            'langzeit_2023_2025': self.erentrudis_path / "export_ERS_2023-12-01-00-00_2025-03-31-23-59.csv"
         }
         
         if dataset_name in file_map and file_map[dataset_name].exists():
@@ -384,9 +381,8 @@ class OptimizedDataLoader:
     def _load_fis_legacy(self, dataset_name):
         """Legacy FIS Loader"""
         file_map = {
-            'export_q1_2025': self.fis_path / "Monitoring" / "250101-250331" / 
-                             "export_1551_2024-12-31-00-00_2025-03-31-23-55.csv",
-            'data_2024_2025_at': self.fis_path / "Monitoring" / "2024-2025-05_AT.csv"
+            'export_q1_2025': self.fis_path / "export_1551_2024-12-31-00-00_2025-03-31-23-55.csv",
+            'data_2024_2025_at': self.fis_path / "2024-2025-05_AT.csv"
         }
         
         if dataset_name in file_map and file_map[dataset_name].exists():
@@ -447,7 +443,7 @@ class OptimizedDataLoader:
         dfs = []
         
         # Korrekter Pfad für Übergabe-Dateien
-        uebergabe_base_path = self.base_path / "Daten" / "vertraulich_erzeugungsdaten-kw-neukirchen_2025-07-21_0937"
+        uebergabe_base_path = self.base_path / "src" / "data" / "kw_neukirchen"
         
         print(f"   Lade {base_name} Datensätze (2020-2024)...")
         

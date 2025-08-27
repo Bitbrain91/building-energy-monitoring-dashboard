@@ -3,6 +3,13 @@
 **Stand:** 27.08.2025  
 **Zweck:** Übersicht der verfügbaren Datenquellen für MokiG-Projekt
 
+## Inhaltsverzeichnis
+
+1. [Twin2Sim - Digitaler Zwilling (Simulationsdaten)](#twin2sim---digitaler-zwilling-simulationsdaten)
+2. [Erentrudisstr - Gebäudemonitoring](#erentrudisstr---gebäudemonitoring)
+3. [FIS_Inhauser - Mehrfamilienhaus-Komplex mit PV](#fis_inhauser---mehrfamilienhaus-komplex-mit-pv)
+4. [KW-Neukirchen - Wasserkraftwerke Erzeugungsdaten](#kw-neukirchen---wasserkraftwerke-erzeugungsdaten)
+
 ---
 
 ## Twin2Sim - Digitaler Zwilling (Simulationsdaten)
