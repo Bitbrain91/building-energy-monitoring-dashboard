@@ -1,186 +1,198 @@
-# Datenlandschaft-Übersicht MokiG Projekt
-## Kompakte Übersicht aller verfügbaren Datenquellen
+# Aggregierte Datenübersicht - Meeting-Präsentation
 
-**Stand:** 20.08.2025  
-**Projekt:** MokiG - Monitoring für klimaneutrale Gebäude (FFG 923166)
+**Stand:** 27.08.2025  
+**Zweck:** Übersicht der verfügbaren Datenquellen für MokiG-Projekt
 
----
+## Inhaltsverzeichnis
 
-## Executive Summary
-
-Das MokiG-Projekt verfügt über **5 Hauptdatenquellen** mit insgesamt **~3,4 Millionen Datenpunkten** aus verschiedenen Gebäuden und Energieerzeugungsanlagen im Raum Salzburg und Pinzgau. Die Daten umfassen Monitoring-Informationen von Gebäudetechnik, Energieerzeugung und Umweltbedingungen mit einer zeitlichen Auflösung von 5 Minuten bis zu Stundenwerten über einen Zeitraum von 2020 bis 2025.
-
----
-
-## 1. Übersicht aller Datenquellen
-
-| Datenquelle | Gebäude/Region | Datenzeitraum | Datenpunkte | Messintervall | Dateiformate | Qualität |
-|-------------|----------------|---------------|-------------|---------------|--------------|----------|
-| **Twin2Sim** | FH Salzburg Forschungsgebäude | Juni 2025 (Beispiel) | ~500 | 1 Stunde | CSV | 100% |
-| **Erentrudisstraße** | Mehrfamilienhaus Salzburg | 2023-2025 | ~284.000 | 5 Minuten | CSV, XLSX | 95% |
-| **Friedrich-Inhauser-Str.** | 8 Wohnhäuser (1,3,5,7,9,11,13,15) | 2024-2025 | ~2.500.000 | 5 Minuten | CSV, XLSX | 86% |
-| **KW Dürnbach** | Wasserkraftwerk Neukirchen | 2020-2024 | ~175.000 | 15 Minuten | XLSX | 100% |
-| **KW Untersulzbach** | Wasserkraftwerk Neukirchen | 2020-2024 | ~175.000 | 15 Minuten | XLSX | 100% |
-| **KW Wiesbach** | Wasserkraftwerk Neukirchen | 2020-2024 | ~175.000 | 15 Minuten | XLSX | 100% |
-| **Netzübergabe** | Neukirchen Stromnetz | 2020-2024 | ~352.000 | 15 Minuten | XLSX | 100% |
+1. [Twin2Sim - Digitaler Zwilling (Simulationsdaten)](#twin2sim---digitaler-zwilling-simulationsdaten)
+2. [Erentrudisstr - Gebäudemonitoring](#erentrudisstr---gebäudemonitoring)
+3. [FIS_Inhauser - Mehrfamilienhaus-Komplex mit PV](#fis_inhauser---mehrfamilienhaus-komplex-mit-pv)
+4. [KW-Neukirchen - Wasserkraftwerke Erzeugungsdaten](#kw-neukirchen---wasserkraftwerke-erzeugungsdaten)
 
 ---
 
-## 2. Detaillierte Datencharakteristik pro Quelle
+## Twin2Sim - Digitaler Zwilling (Simulationsdaten)
 
-### 2.1 Twin2Sim - Forschungsgebäude FH Salzburg
+**Beschreibung:** Simulationsdaten eines digitalen Gebäudezwillings. Die im Dashboard verfügbaren Daten sind nur ein kleiner Ausschnitt der tatsächlich vorhandenen Daten.
 
-| Aspekt | Details |
-|--------|---------|
-| **Datensätze** | 5 CSV-Dateien |
-| **Spaltennamen/Anzahl** | |
-| - T2S_IntPV.csv | 9 Spalten: Leistung, Frequenz, Energie, Temperatur |
-| - T2S_Wetterdaten.csv | 14 Spalten: Wind, Feuchte, Druck, Strahlung, Temperatur |
-| - T2S_Lüftung.csv | 42 Spalten: Zuluft, Abluft, WRG, Ventilator-Parameter |
-| - T2S_RAU006.csv | Raummonitoring-Parameter |
-| - T2S_ManiPV.csv | PV-Monitoring-Parameter |
-| **Datenpunkte** | ~100 Zeilen pro Datei (Beispielzeitraum) |
-| **Aufnahmefrequenz** | Stündlich (60-Minuten-Intervalle) |
-| **Fehlende Werte** | 0% - Vollständige Zeitreihen |
-| **Qualität** | Exzellent - Lückenlose Messreihen |
-| **Potenzielle Lücken** | Keine - nur Beispieldaten verfügbar |
+### Verfügbare Datensätze im Dashboard:
+- **T2S_IntPV** - Interne PV-Anlage (Growatt Wechselrichter)
+- **T2S_Lüftung** - RLT-Anlagendaten 
+- **T2S_ManiPV** - Manipulierte PV-Daten
+- **T2S_RAU006** - Raumautomation
+- **T2S_Wetterdaten** - Wetterstation
 
-### 2.2 Erentrudisstraße - Mehrfamilienhaus
+### Parameterübersicht:
+- **Tatsächlich verfügbar:** Über 1.000 Parameter
+- **Im Dashboard-Auszug:** 106 Parameter
+- **Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
 
-| Aspekt | Details |
-|--------|---------|
-| **Gebäudestruktur** | UG, EG, 1-4 OG |
-| **Datensätze** | 6 CSV + 3 XLSX Dateien |
-| **Hauptdatei-Spalten** | 15-49 Spalten je nach Datei |
-| **Kernparameter** | |
-| - Temperaturen | 8-11 Messpunkte (VL/RL Fernwärme, Warmwasser, Kaltwasser) |
-| - Durchflüsse | 3 Zähler (Fernwärme, TWE, Zirkulation) |
-| - Leistungen | Fernwärme (-77 bis 252 kW), Zirkulation (0-15 kW) |
-| - Zählerstände | Fernwärme, Zirkulation (kWh) |
-| **Datenpunkte** | 89.202 (Jahr 2024) + 194.828 (weitere Zeiträume) |
-| **Aufnahmefrequenz** | 5-Minuten-Intervalle (288 Werte/Tag) |
-| **Fehlende Werte** | ~5% (hauptsächlich Nachtstunden) |
-| **Qualität** | Sehr gut - kontinuierliche Aufzeichnung |
-| **Potenzielle Lücken** | TWE Wasserzähler konstant 0 (defekt), Pumpensteuerung 90% fehlend |
+### Zeitauflösung (Messintervall):
+- **Tatsächliche Aufzeichnung:** 1-5 Sekunden (variabel)
+- **Dashboard-Testdaten:** 1 Stunde (nur Beispieldaten Juni 2025)
 
-### 2.3 Friedrich-Inhauser-Straße - Wohnkomplex
+### Zu klären im Meeting:
+- [ ] Ab wann beginnt die Datenaufzeichnung?
+- [ ] Sind historische Daten ebenfalls in 1-5 Sekunden Auflösung verfügbar?
+- [ ] Welche der 1.000+ Parameter sind für MokiG relevant?
 
-| Aspekt | Details |
-|--------|---------|
-| **Gebäudestruktur** | 8 Häuser (1, 3, 5, 7, 9, 11, 13, 15) |
-| **Datensätze** | 3 CSV + 2 XLSX Dateien |
-| **Hauptdatei-Spalten** | 111 Messpunkte gesamt |
-| **Sensorverteilung** | |
-| - Stromzähler | 24 Sensoren (Lüftung, Heizung, Wärmepumpe) |
-| - Kältezähler | 29 Sensoren (alle Häuser) |
-| - Temperaturen | 41 Sensoren (VL/RL, Außentemperatur) |
-| - Durchflüsse | 6 Sensoren (0-7 m³/h) |
-| - Leistungen | 10 Sensoren (Pelletkessel, DLE, etc.) |
-| **Datenpunkte** | ~22.800 pro 3 Monate × 111 Parameter = 2,5 Mio. |
-| **Aufnahmefrequenz** | 5-Minuten-Intervalle |
-| **Fehlende Werte** | 14,2% (3 größere Ausfälle: 36h, 19,5h, 19,5h) |
-| **Qualität** | Gut - gleichmäßige Verfügbarkeit (85,8%) |
-| **Potenzielle Lücken** | Wärmepumpen-Daten 43% fehlend, einige Sensoren konstant 0 |
+**Zusätzliche Dokumente:** Energieausweis vorhanden
 
-### 2.4 Kraftwerke Neukirchen - Wasserkraft
-
-| Aspekt | KW Dürnbach | KW Untersulzbach | KW Wiesbach |
-|--------|-------------|------------------|-------------|
-| **Dateien** | 5 XLSX (2020-2024) | 5 XLSX (2020-2024) | 5 XLSX (2020-2024) |
-| **Spalten** | 4: Zeit_Von, Zeit_Bis, Energie (kWh), Leistung (kW) | Identisch | Identisch |
-| **Datenpunkte/Jahr** | ~35.040-35.137 | ~35.040-35.137 | ~35.040-35.137 |
-| **Aufnahmefrequenz** | 15-Minuten-Intervalle (96 Werte/Tag) | 15 Minuten | 15 Minuten |
-| **Fehlende Werte** | < 0,1% | < 0,1% | < 0,1% |
-| **Mittl. Leistung** | 243 kW | Vergleichbar | Vergleichbar |
-| **Max. Leistung** | 293 kW | Vergleichbar | Vergleichbar |
-| **Jahreserzeugung** | ~2,14 GWh | Vergleichbar | Vergleichbar |
-| **Qualität** | Exzellent | Exzellent | Exzellent |
-
-### 2.5 Netzübergabe Neukirchen
-
-| Aspekt | Bezug | Lieferung |
-|--------|-------|-----------|
-| **Dateien** | 60 XLSX (12 Monate × 5 Jahre) | 60 XLSX (12 Monate × 5 Jahre) |
-| **Spalten** | 4: Zeit_Von, Zeit_Bis, Wert, Einheit | Identisch |
-| **Datenpunkte/Monat** | ~2.880-2.980 | ~2.880-2.980 |
-| **Aufnahmefrequenz** | 15-Minuten-Intervalle | 15 Minuten |
-| **Fehlende Werte** | 0% | 0% |
-| **Qualität** | Exzellent - lückenlos | Exzellent - lückenlos |
+### Übersichtstabelle Twin2Sim:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 106 | >1.000 | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 1 Stunde (Testdaten) | 1-5 Sekunden | _[Im Meeting klären]_ |
+| **Zeitraum** | Juni 2025 (Test) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Ja (1h durchgehend) | _[Im Meeting klären]_ | - |
 
 ---
 
-## 3. Zusammenfassende Qualitätsbewertung
+## Erentrudisstr - Gebäudemonitoring
 
-### Datenvolumen gesamt
+**Beschreibung:** Monitoring eines einzelnen Gebäudes mit Fokus auf Energieeffizienz und Gebäudeautomation
 
-| Metrik | Wert |
-|--------|------|
-| **Gesamte Datenpunkte** | ~3,4 Millionen |
-| **Zeitliche Abdeckung** | 2020-2025 |
-| **Anzahl Gebäude/Anlagen** | 12 (8 Wohnhäuser, 1 MFH, 3 Kraftwerke) |
-| **Anzahl Dateien** | ~155 Dateien |
-| **Speicherbedarf** | ~335 MB |
+### Verfügbare Datensätze:
+- **Langzeitdaten 2023-2025** - Tägliche Aggregation (49 Parameter)
+- **Komplettdaten Juli 2024** - 5-Minuten-Auflösung (45 Parameter)
+- **Relevante Parameter 2024** - 5-Minuten-Auflösung (23 ausgewählte Parameter)
 
-### Qualitätsübersicht
+### Parameterübersicht Langzeitdaten (49 Parameter):
 
-| Datenquelle | Vollständigkeit | Konsistenz | Verfügbarkeit | Gesamtqualität |
-|-------------|-----------------|------------|---------------|----------------|
-| Twin2Sim | ⭐⭐⭐⭐⭐ 100% | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ (Beispiel) | Exzellent für Tests |
-| Erentrudisstraße | ⭐⭐⭐⭐ 95% | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Sehr gut |
-| F.-Inhauser-Str. | ⭐⭐⭐⭐ 86% | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Gut |
-| Kraftwerke | ⭐⭐⭐⭐⭐ 100% | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Exzellent |
-| Netzübergabe | ⭐⭐⭐⭐⭐ 100% | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Exzellent |
+**Kategorisierung der 49 Parameter:**
+- **Temperaturmessungen:** 18 Parameter
+  - Vor-/Rücklauf verschiedener Kreise (HK1 Ost, HK2 West, EV primär/sekundär)
+  - Warmwasser, Kaltwasser, Zirkulation
+- **Pufferspeicher:** 9 Parameter (Puffer 2.01 bis 2.08 + Außenfühler)
+- **Pumpensteuerung:** 12 Parameter
+  - Zirkulation primär/sekundär (Status, Dauer, Zwang)
+  - Pufferladung, HK1/HK2 Status
+- **Energie/Zähler:** 5 Parameter
+  - Fernwärme (Zählerstand, Leistung)
+  - Zirkulation (Zählerstand, Leistung)
+  - Wasserzähler TWE
+- **Durchflussmessungen:** 3 Parameter (Fernwärme, TWE, Zirkulation)
+- **Status/Betrieb:** 1 Parameter (KWZ EIN/AUS)
 
----
+**Vergleich zu anderen Datensätzen:**
+- **Juli 2024 (45 Parameter):** Fehlen 4 Pumpensteuerungsparameter
+- **Relevante 2024 (23 Parameter):** Ausgewählte Teilmenge für Energieanalyse
 
-## 4. Kritische Datenlücken und Handlungsbedarf
+**Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
 
-### Identifizierte Probleme
+### Zeitauflösung (Messintervall):
+- **2023-2025 Langzeit:** Tägliche Datenpunkte
+- **2024 Detaildaten:** 5 Minuten
 
-| Priorität | Datenquelle | Problem | Auswirkung | Empfehlung |
-|-----------|-------------|---------|------------|------------|
-| **HOCH** | Erentrudisstraße | TWE Wasserzähler konstant 0 | Warmwasserverbrauch nicht messbar | Zähler prüfen/reparieren |
-| **MITTEL** | F.-Inhauser-Str. | 3 Systemausfälle (75h gesamt) | Datenlücken Jan/Feb 2025 | Backup-System einrichten |
-| **MITTEL** | F.-Inhauser-Str. | Wärmepumpen 43% fehlend | Eingeschränkte WP-Analyse | Sensoren prüfen |
-| **NIEDRIG** | Erentrudisstraße | Pumpensteuerung 90% fehlend | Betriebsanalyse eingeschränkt | Optional nachrüsten |
-| **NIEDRIG** | Alle | Unterschiedliche Formate | Erschwerte Integration | Harmonisierung |
+### Zu klären im Meeting:
+- [ ] Sind Daten vor 2024 auch in 5-Minuten-Auflösung archiviert?
+- [ ] Ist 5 Minuten die maximale Auflösung oder gibt es höhere Auflösungen?
+- [ ] Wie weit reichen die historischen Daten zurück (vor 2023)?
+- [ ] Anzahl der überwachten Gebäude/Einheiten?
 
-### Positive Aspekte
+**Zusätzliche Dokumente:** Energieausweis vorhanden
 
-- **Kraftwerksdaten**: Perfekte 5-Jahres-Zeitreihen ohne Lücken
-- **Zeitliche Auflösung**: 5-15 Minuten ermöglicht detaillierte Analysen
-- **Gebäudevielfalt**: Verschiedene Gebäudetypen für Vergleichsanalysen
-- **Lange Zeiträume**: Bis zu 5 Jahre historische Daten verfügbar
-
----
-
-## 5. Nutzungspotenziale für Analysen
-
-| Analyseart | Geeignete Datenquellen | Mögliche Erkenntnisse |
-|------------|------------------------|----------------------|
-| **Energiebilanzierung** | Alle | Gesamtenergieverbrauch vs. Erzeugung |
-| **Lastganganalysen** | Erentrudis, F.-Inhauser | Tages-/Wochenprofile, Spitzenlastzeiten |
-| **Erzeugungsprognosen** | Kraftwerke, Twin2Sim PV | Produktionsvorhersagen |
-| **Effizienzoptimierung** | F.-Inhauser (8 Häuser) | Vergleich identischer Gebäude |
-| **Wetterkorrelation** | Twin2Sim + alle Gebäude | Heizlast vs. Außentemperatur |
-| **Netzstabilität** | Kraftwerke + Netzübergabe | Einspeisung vs. Bezug |
-| **Predictive Maintenance** | Alle kontinuierlichen Daten | Anomalieerkennung |
+### Übersichtstabelle Erentrudisstr:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 49 (Langzeit), 45 (Juli), 23 (Relevant) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 1 Tag (2023-2025), 5 Min (2024) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitraum** | Ab 01.12.2023 | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Nein (täglich vs. 5 Min) | _[Im Meeting klären]_ | - |
 
 ---
 
-## 6. Technische Hinweise für Datennutzung
+## FIS_Inhauser - Mehrfamilienhaus-Komplex mit PV
 
-### Empfohlene Verarbeitungstools
-- **Python**: pandas, openpyxl für Excel-Dateien
-- **Zeitreihenanalyse**: 5-15 Minuten Auflösung ideal
-- **Speicherbedarf**: ~2 GB RAM für Gesamtanalyse
+**Beschreibung:** Monitoring von 8 Mehrfamilienhäusern (Hausnummern: 1, 3, 5, 7, 9, 11, 13, 15) mit integrierten Photovoltaikanlagen und moderner Gebäudetechnik.
 
-### Datenintegration
-1. **Zeitstempel harmonisieren**: ISO 8601 Format
-2. **Einheiten standardisieren**: kW/kWh einheitlich
-3. **Dezimaltrennzeichen**: Punkt vs. Komma beachten
-4. **Encoding**: UTF-8 oder ISO-8859-1
+### Verfügbare Datensätze:
+1. **Außentemperatur 2024-2025** - Nur 2 Spalten (Datum + Außentemperatur)
+2. **Quartalsdaten Q1/2025** - Kompletter Datensatz mit allen 111 Parametern
+
+### Parameterübersicht Q1/2025 (111 Parameter):
+
+**Kategorisierung der 111 Parameter:**
+- **Gebäudespezifisch:** 52 Parameter
+  - Verteilt auf 8 Häuser (1, 3, 5, 7, 9, 11, 13, 15)
+  - Lüftungsgeräte, individuelle Messungen pro Haus
+- **Energie/Zähler:** 39 Parameter
+  - Stromzähler (Heizung, Lüftung, PV)
+  - Kältezähler, Leistungsmessungen
+- **Wärmepumpen:** 29 Parameter
+  - ABL-WP und ABW-WP Systeme
+  - Durchfluss, Energie, Temperaturen
+- **Temperaturmessungen:** 15 Parameter
+  - Vor-/Rücklauf verschiedener Systeme
+  - Pelletkessel, DLE
+- **Durchflussmessungen:** 10 Parameter
+  - Kältezähler der Lüftungsgeräte
+- **PV-Anlage:** 1 Parameter (Stromzähler PV Haus 15)
+
+**Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
+
+### Zeitauflösung (Messintervall):
+- **Aktuell:** 5 Minuten
+- **Historisch:** Nur Q1 2025
+
+### Zu klären im Meeting:
+- [ ] Ist 5-Minuten die maximale Auflösung oder gibt es sekundengenaue Daten?
+- [ ] Gibt es noch mehr Parameter als im vorhandenen Datensatz?
+- [ ] Historische Daten vor Q1 verfügbar? -> Wenn ja, in welcher Auflösung?
+
+**Zusätzliche Dokumente:** Energieausweis vorhanden
+
+### Übersichtstabelle FIS_Inhauser:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 111 (Q1 2025), 2 (Außentemp) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 5 Minuten | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitraum** | Q1 2025 (31.12.2024 - 31.03.2025) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Ja (5 Min durchgehend) | _[Im Meeting klären]_ | - |
 
 ---
 
-*Dokumentversion: 1.0 | Erstellt für Projektmeeting | Stand: 20.08.2025*
+## KW-Neukirchen - Wasserkraftwerke Erzeugungsdaten
+
+**Beschreibung:** Erzeugungsdaten von drei Wasserkraftwerken sowie Netzübergabepunkte. Kritische Infrastruktur für regionale Energieversorgung.
+
+### Kraftwerke:
+1. **KW Dürnbach** - Laufwasserkraftwerk
+2. **KW Untersulzbach** - Laufwasserkraftwerk
+3. **KW Wiesbach** - Laufwasserkraftwerk
+
+### Verfügbare Datensätze:
+- **Erzeugungsdaten pro Kraftwerk** (2020-2024, jahresweise Excel-Dateien)
+  - Parameter: WERT ENERGIE [kWh], WERT LEISTUNG [kW]
+- **Übergabe Bezug** - Netzbezug bei Unterdeckung
+  - Parameter: WERT [kWh]
+- **Übergabe Lieferung** - Netzeinspeisung bei Überproduktion  
+  - Parameter: WERT [kWh]
+
+### Parameterübersicht:
+- **Pro Kraftwerk (Erzeugung):** 2 Parameter
+  - WERT ENERGIE [kWh]
+  - WERT LEISTUNG [kW]
+- **Übergabe Bezug:** 1 Parameter (WERT [kWh])
+- **Übergabe Lieferung:** 1 Parameter (WERT [kWh])
+- **Gesamt:** 8 eindeutige Parameter (3×2 + 2×1)
+
+**Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
+
+### Zeitauflösung (Messintervall):
+- **Durchgehend 2020-2024:** 15 Minuten
+
+### Zu klären im Meeting:
+- [ ] Gibt es Daten in höherer Auflösung als 15 Minuten?
+- [ ] Historische Daten vor 2020 verfügbar?
+- [ ] Weitere Parameter/Datensätze die für uns relevant sein könnten?
+
+### Übersichtstabelle KW-Neukirchen:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 8 (3×2 Kraftwerke + 2 Übergabe) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 15 Minuten | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitraum** | 01.01.2020 - 31.12.2024 | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Ja (15 Min durchgehend) | _[Im Meeting klären]_ | - |
+
