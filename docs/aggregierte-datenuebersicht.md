@@ -21,7 +21,7 @@
 - **Im Dashboard-Auszug:** 106 Parameter
 - **Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
 
-### Datenfrequenz:
+### Zeitauflösung (Messintervall):
 - **Tatsächliche Aufzeichnung:** 1-5 Sekunden (variabel)
 - **Dashboard-Testdaten:** 1 Stunde (nur Beispieldaten Juni 2025)
 
@@ -31,6 +31,14 @@
 - [ ] Welche der 1.000+ Parameter sind für MokiG relevant?
 
 **Zusätzliche Dokumente:** Energieausweis vorhanden
+
+### Übersichtstabelle Twin2Sim:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 106 | >1.000 | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 1 Stunde (Testdaten) | 1-5 Sekunden | _[Im Meeting klären]_ |
+| **Zeitraum** | Juni 2025 (Test) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Ja (1h durchgehend) | _[Im Meeting klären]_ | - |
 
 ---
 
@@ -66,17 +74,25 @@
 
 **Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
 
-### Datenfrequenz:
+### Zeitauflösung (Messintervall):
 - **2023-2025 Langzeit:** Tägliche Datenpunkte
 - **2024 Detaildaten:** 5 Minuten
 
 ### Zu klären im Meeting:
-- [ ] Sind Daten vor 2024 auch in 5-Minuten-Frequenz archiviert?
-- [ ] Ist 5 Minuten die maximale Auflösung oder gibt es höhere Frequenzen?
+- [ ] Sind Daten vor 2024 auch in 5-Minuten-Auflösung archiviert?
+- [ ] Ist 5 Minuten die maximale Auflösung oder gibt es höhere Auflösungen?
 - [ ] Wie weit reichen die historischen Daten zurück (vor 2023)?
 - [ ] Anzahl der überwachten Gebäude/Einheiten?
 
 **Zusätzliche Dokumente:** Energieausweis vorhanden
+
+### Übersichtstabelle Erentrudisstr:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 49 (Langzeit), 45 (Juli), 23 (Relevant) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 1 Tag (2023-2025), 5 Min (2024) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitraum** | Ab 01.12.2023 | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Nein (täglich vs. 5 Min) | _[Im Meeting klären]_ | - |
 
 ---
 
@@ -109,16 +125,24 @@
 
 **Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
 
-### Datenfrequenz:
+### Zeitauflösung (Messintervall):
 - **Aktuell:** 5 Minuten
 - **Historisch:** Nur Q1 2025
 
 ### Zu klären im Meeting:
-- [ ] Ist 5-Minuten die maximale Frequenz oder gibt es sekundengenaue Daten?
+- [ ] Ist 5-Minuten die maximale Auflösung oder gibt es sekundengenaue Daten?
 - [ ] Gibt es noch mehr Parameter als im vorhandenen Datensatz?
-- [ ] Historische Daten vor Q1 verfügbar? -> Wenn ja, in welcher Frequenz?
+- [ ] Historische Daten vor Q1 verfügbar? -> Wenn ja, in welcher Auflösung?
 
 **Zusätzliche Dokumente:** Energieausweis vorhanden
+
+### Übersichtstabelle FIS_Inhauser:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 111 (Q1 2025), 2 (Außentemp) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 5 Minuten | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitraum** | Q1 2025 (31.12.2024 - 31.03.2025) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Ja (5 Min durchgehend) | _[Im Meeting klären]_ | - |
 
 ---
 
@@ -149,11 +173,19 @@
 
 **Relevante Parameter für MokiG:** _[Wird von Kollegen ergänzt]_
 
-### Datenfrequenz:
+### Zeitauflösung (Messintervall):
 - **Durchgehend 2020-2024:** 15 Minuten
 
 ### Zu klären im Meeting:
 - [ ] Gibt es Daten in höherer Auflösung als 15 Minuten?
 - [ ] Historische Daten vor 2020 verfügbar?
 - [ ] Weitere Parameter/Datensätze die für uns relevant sein könnten?
+
+### Übersichtstabelle KW-Neukirchen:
+| Kriterium | Aus Analyse (Dashboard) | Tatsächlich verfügbar | MokiG-Relevant |
+|-----------|-------------------------|----------------------|----------------|
+| **Anzahl Parameter** | 8 (3×2 Kraftwerke + 2 Übergabe) | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitauflösung** | 15 Minuten | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Zeitraum** | 01.01.2020 - 31.12.2024 | _[Im Meeting klären]_ | _[Im Meeting klären]_ |
+| **Historische Daten in gleicher Auflösung** | Ja (15 Min durchgehend) | _[Im Meeting klären]_ | - |
 
