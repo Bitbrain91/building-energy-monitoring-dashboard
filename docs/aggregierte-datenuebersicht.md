@@ -30,6 +30,8 @@
 - [ ] Sind historische Daten ebenfalls in 1-5 Sekunden Auflösung verfügbar?
 - [ ] Welche der 1.000+ Parameter sind für MokiG relevant?
 
+**Zusätzliche Dokumente:** Energieausweis vorhanden
+
 ---
 
 ## Erentrudisstr - Gebäudemonitoring
@@ -74,6 +76,8 @@
 - [ ] Wie weit reichen die historischen Daten zurück (vor 2023)?
 - [ ] Anzahl der überwachten Gebäude/Einheiten?
 
+**Zusätzliche Dokumente:** Energieausweis vorhanden
+
 ---
 
 ## FIS_Inhauser - Mehrfamilienhaus-Komplex mit PV
@@ -113,6 +117,8 @@
 - [ ] Ist 5-Minuten die maximale Frequenz oder gibt es sekundengenaue Daten?
 - [ ] Gibt es noch mehr Parameter als im vorhandenen Datensatz?
 - [ ] Historische Daten vor Q1 verfügbar? -> Wenn ja, in welcher Frequenz?
+
+**Zusätzliche Dokumente:** Energieausweis vorhanden
 
 ---
 
